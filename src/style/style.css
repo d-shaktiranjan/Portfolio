@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: rgb(37, 37, 37);
+  --primary-text-color: rgb(255, 245, 191);
+  --accent-color: rgb(248, 202, 202);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+  font-size: large;
+}
+
+ul li {
+  display: inline;
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
