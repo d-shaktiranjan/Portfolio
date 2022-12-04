@@ -1,0 +1,24 @@
+.skill-img {
+    width: 100px;
+    height: 100px;
+}
+
+.skill {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-section {
+    justify-content: space-evenly;
+}
+
+.skills-heading {
+    text-align: center;
+    color: var(--accent-color);
+    margin: 20px;
+}
