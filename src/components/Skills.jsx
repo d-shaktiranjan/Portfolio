@@ -1,6 +1,5 @@
 import React from 'react'
 import { Skill } from './Skill'
-import docker from '../static/icons/docker.svg';
 
 export const Skills = (props) => {
     const getImagePath = (item) => {

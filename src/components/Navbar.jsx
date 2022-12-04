@@ -1,15 +1,16 @@
 import React from 'react';
 import '../style/navbar.css';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     return (
         <div className='flex navbar'>
             <nav>
                 <ul className='nav-links'>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/skills">Skills</a></li>
-                    <li className='active-link'><a href="/projects">Projects</a></li>
-                    <li><a href="/contact">Contact Me</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/skills">Skills</Link></li>
+                    <li className='active-link'><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact-me">Contact Me</Link></li>
                 </ul>
             </nav>
         </div>
