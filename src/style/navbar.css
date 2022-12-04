@@ -1,5 +1,4 @@
 .navbar {
-    border: 2px solid var(--accent-color);
     border-radius: 50px;
     margin: 10px;
     justify-content: center;
@@ -8,6 +7,11 @@
 .nav-links li {
     margin: 20px;
     flex-direction: row;
+}
+
+.nav-links li:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .active-link {

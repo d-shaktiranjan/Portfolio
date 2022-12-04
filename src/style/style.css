@@ -42,3 +42,39 @@ ul li {
   display: flex;
   align-items: center;
 }
+
+.container {
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.block {
+  display: block;
+}
+
+.main-heading {
+  font-weight: bolder;
+  font-size: 48px;
+  color: var(--accent-color);
+  padding-block: 10px;
+}
+
+.primary-btn {
+  border-style: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 10px;
+  color: var(--accent-color);
+  background-color: inherit;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: medium;
+}
+
+.primary-btn:hover {
+  border: none;
+  background-color: var(--primary-text-color);
+  color: var(--little-black);
+  /* transition: 0.8s ease; */
+}
