@@ -14,7 +14,7 @@
     text-underline-offset: 5px;
 }
 
-.active-link {
+ul .active {
     font-weight: bold;
     color: var(--accent-color);
 }

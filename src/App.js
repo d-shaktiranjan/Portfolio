@@ -4,34 +4,21 @@ import { Footer } from './components/Footer';
 import { Home } from './components/Home';
 import { SkillSection } from './components/SkillSection';
 import { ContactMe } from './components/ContactMe';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import { Projects } from './components/Projects';
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/skills">
-            <SkillSection />
-          </Route>
-          <Route exact path="/projects">
-            <Projects />
-          </Route>
-          <Route exact path="/contact-me">
-            <ContactMe />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='skills' element={<SkillSection />} />
+        <Route path='projects' element={<Projects />} />
+        <Route path='contact-me' element={<ContactMe />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
