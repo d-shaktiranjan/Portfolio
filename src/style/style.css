@@ -7,7 +7,7 @@
 }
 
 :root {
-  --background-color: rgb(37, 37, 37);
+  --background-color: #18181b;
   --little-black: rgb(10, 10, 10);
   --primary-text-color: rgb(255, 245, 191);
   --accent-color: rgb(248, 202, 202);
@@ -89,4 +89,10 @@ ul li {
 .underline {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--accent-color);
+  margin: 20px;
 }

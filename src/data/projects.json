@@ -1,0 +1,66 @@
+[
+    {
+        "projectName": "E Note Book",
+        "projectImage": "https://images.unsplash.com/photo-1527345931282-806d3b11967f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        "details": "A cloud based notebook storing app.",
+        "repoLink": "https://github.com/d-shaktiranjan/E_Note_Book",
+        "liveLink": "https://note.shaktiranjan.in",
+        "tools": [
+            "Python",
+            "Django",
+            "SqLite3",
+            "Bootstrap"
+        ]
+    },
+    {
+        "projectName": "Backstack",
+        "projectImage": "https://plus.unsplash.com/premium_photo-1664201890376-b735362539bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80",
+        "details": "A solution for frontend developers to store data from there users.",
+        "repoLink": "",
+        "liveLink": "",
+        "tools": [
+            "React",
+            "Express JS",
+            "Mongo DB",
+            "Node JS"
+        ]
+    },
+    {
+        "projectName": "Web Image Editor",
+        "projectImage": "",
+        "details": "An Open CV app, where you can add filter in an images.",
+        "repoLink": "https://github.com/d-shaktiranjan/WebImageEditor",
+        "liveLink": "",
+        "tools": [
+            "Python",
+            "Open CV",
+            "Flask"
+        ]
+    },
+    {
+        "projectName": "Shortify Visit",
+        "projectImage": "https://gadgetsbeat.com/wp-content/uploads/2022/04/URL-Shortener-Meaning-Benefits-When-To-Use.jpg",
+        "details": "Make link shorter.",
+        "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
+        "liveLink": "",
+        "tools": [
+            "Python",
+            "Flask",
+            "SqLite3",
+            "Bootstrap"
+        ]
+    },
+    {
+        "projectName": "Cart Public",
+        "projectImage": "",
+        "details": "An eCommerce cloth selling site.",
+        "repoLink": "",
+        "liveLink": "",
+        "tools": [
+            "Python",
+            "Django",
+            "SqLite3",
+            "HTML,CSS & JS"
+        ]
+    }
+]

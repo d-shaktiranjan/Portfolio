@@ -1,0 +1,51 @@
+.project-image {
+    width: 488px;
+    height: 256px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    margin: 20px;
+    width: fit-content;
+    border-radius: 20px;
+    height: 450px;
+}
+
+.project-card:hover {
+    background-color: #27272a;
+}
+
+.project-section {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.project-title {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.project-tech {
+    font-weight: bold;
+}
+
+.project-details {
+    margin: 10px;
+    margin-left: 0px;
+    font-weight: 350;
+    color: aliceblue;
+}
+
+.card-link {
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    margin-left: 0px;
+}
+
+.card-link:hover {
+    color: var(--accent-color);
+}

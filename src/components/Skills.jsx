@@ -9,7 +9,7 @@ export const Skills = (props) => {
     }
     return (
         <div>
-            <h1 className='skills-heading underline'>{props.heading}</h1>
+            <h1 className='sub-heading underline'>{props.heading}</h1>
             <div className='grid skills'>
                 {
                     props.list.map((item) => (
