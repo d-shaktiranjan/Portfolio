@@ -7,7 +7,7 @@ export const SkillSection = () => {
     const frameworkLibList = ["React", "Express JS", "Django", "Flask", "Bootstrap"];
     const techTools = ["Linux", "Git", "Docker", "Mongo DB"];
     return (
-        <div className='flex skill-section'>
+        <div className='flex skill-section min-height'>
             <Skills list={lanageList} heading="Languages" />
             <Skills list={frameworkLibList} heading="Framework & libs." />
             <Skills list={techTools} heading="Tech Tools" />

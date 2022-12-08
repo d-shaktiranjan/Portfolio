@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
-        <div className='flex container home'>
+        <div className='flex container home min-height'>
             Hey, This is
             <span className='main-heading block'>Shakti Ranjan Debata.</span>
             <span className='main-heading block primary-text-color'>I build Backend things.</span>

@@ -8,3 +8,9 @@
 .primary-text-color {
     color: var(--primary-text-color);
 }
+
+@media (width <=768px) {
+    .home {
+        padding: 3rem 2rem;
+    }
+}

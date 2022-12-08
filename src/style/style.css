@@ -97,6 +97,11 @@ ul li {
   margin: 20px;
 }
 
+.min-height {
+  height: calc(97.9vh - var(--nav-height) - var(--footer-height)) !important;
+}
+
+/* Scroll bar style */
 ::-webkit-scrollbar {
   width: 5px;
   height: 8px;

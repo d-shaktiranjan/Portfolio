@@ -1,7 +1,7 @@
 footer {
     background-color: var(--little-black);
     justify-content: space-around;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     height: var(--footer-height);
@@ -15,4 +15,15 @@ footer {
 .social-links span :hover {
     color: var(--accent-color);
     transition: 0.7s ease;
+}
+
+@media (width <=768px) {
+    .footer-text {
+        display: none;
+    }
+
+    .social-links {
+        width: 100%;
+        justify-content: space-evenly;
+    }
 }
