@@ -1,8 +1,22 @@
+.home-section {
+    justify-content: space-between;
+}
+
 .home {
     font-size: 20px;
     flex-direction: column;
     align-items: flex-start;
     padding: 10rem 7rem;
+}
+
+.home-image {
+    width: fit-content;
+}
+
+.my-image {
+    width: 25rem;
+    border-radius: 300px;
+    text-align: center;
 }
 
 .primary-text-color {
@@ -12,5 +26,14 @@
 @media (width <=768px) {
     .home {
         padding: 3rem 2rem;
+    }
+
+    .my-image {
+        width: 20rem;
+    }
+
+    .home-section {
+        flex-direction: column-reverse;
+        margin-top: 15rem;
     }
 }
