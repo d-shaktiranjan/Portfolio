@@ -14,8 +14,8 @@ export const Project = (props) => {
                 {projectInfo.details}
             </div>
             <div>
-                {projectInfo.repoLink && <span className='card-link'><a href={projectInfo.repoLink} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></span>}
-                {projectInfo.liveLink && <span className='card-link'><a href={projectInfo.liveLink} target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Live Link</a></span>}
+                {projectInfo.repoLink && <span className='card-link'><a href={projectInfo.repoLink} target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i> GitHub</a></span>}
+                {projectInfo.liveLink && <span className='card-link'><a href={projectInfo.liveLink} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-link"></i> Live Link</a></span>}
             </div>
         </div>
     )
