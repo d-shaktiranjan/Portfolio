@@ -18,10 +18,3 @@
     justify-content: space-evenly;
     height: calc(80vh - var(--nav-height) - var(--footer-height));
 }
-
-@media (width <=768px) {
-    .skill-section {
-        flex-direction: column;
-        margin: 3.5rem 0rem 5rem;
-    }
-}

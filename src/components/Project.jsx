@@ -8,7 +8,7 @@ export const Project = (props) => {
     return (
         <div className='container project-card'>
             <img className='project-image' src={projectInfo.projectImage || defaultProjectImage} alt="" />
-            <h3 className='sub-heading project-title'>{projectInfo.projectName || "Project Name"}</h3>
+            <h3 className='sub-heading project-title accent'>{projectInfo.projectName || "Project Name"}</h3>
             <div className='project-tech'>{tools.join(" | ")}</div>
             <div className='project-details'>
                 {projectInfo.details}
