@@ -42,6 +42,10 @@
         font-size: 20px;
     }
 
+    .main-heading {
+        font-size: 40px;
+    }
+
     /* Footer Section */
     .footer-text {
         display: none;
@@ -67,7 +71,9 @@
     }
 
     /* Project Section */
-    /* TODO */
+    .project-tech {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -79,12 +85,12 @@
 
     /* Project Section */
     .project-image {
-        width: 350px !important;
+        width: 330px !important;
         height: 180px !important;
     }
 
     .project-card {
-        width: 390px;
+        width: 350px;
         height: 390px !important;
     }
 }
