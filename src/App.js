@@ -1,4 +1,5 @@
 import './style/style.css';
+import './style/responsive.css';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './components/Home';

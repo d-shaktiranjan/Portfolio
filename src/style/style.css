@@ -22,6 +22,11 @@ body {
   /* font-family: 'Open Sans', sans-serif; */
 }
 
+::selection {
+  background-color: var(--primary-text-color);
+  color: var(--background-color);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -55,6 +60,14 @@ ul li {
   margin-inline: auto;
 }
 
+.accent {
+  color: var(--accent-color);
+}
+
+.accent::selection {
+  background-color: var(--accent-color);
+}
+
 .block {
   display: block;
 }
@@ -62,7 +75,6 @@ ul li {
 .main-heading {
   font-weight: bolder;
   font-size: 48px;
-  color: var(--accent-color);
   padding-block: 10px;
 }
 
@@ -80,10 +92,8 @@ ul li {
 }
 
 .primary-btn:hover {
-  border: none;
   background-color: var(--primary-text-color);
   color: var(--little-black);
-  /* transition: 0.8s ease; */
 }
 
 .underline {
@@ -93,12 +103,11 @@ ul li {
 
 .sub-heading {
   text-align: center;
-  color: var(--accent-color);
   margin: 20px;
 }
 
 .min-height {
-  height: calc(97.9vh - var(--nav-height) - var(--footer-height)) !important;
+  min-height: calc(97.9vh - var(--nav-height) - var(--footer-height)) !important;
 }
 
 /* Scroll bar style */
