@@ -16,5 +16,4 @@
 
 .skill-section {
     justify-content: space-evenly;
-    height: calc(80vh - var(--nav-height) - var(--footer-height));
 }

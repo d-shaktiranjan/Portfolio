@@ -6,7 +6,7 @@ export const Project = (props) => {
     const projectInfo = props.projectInfo;
     const tools = projectInfo.tools;
     return (
-        <div className='container project-card'>
+        <div className='container flex project-card'>
             <img className='project-image' src={projectInfo.projectImage || defaultProjectImage} alt="" />
             <h3 className='sub-heading project-title accent'>{projectInfo.projectName || "Project Name"}</h3>
             <div className='project-tech'>{tools.join(" | ")}</div>

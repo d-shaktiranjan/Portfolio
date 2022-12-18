@@ -107,7 +107,7 @@ ul li {
 }
 
 .min-height {
-  height: calc(97.9vh - var(--nav-height) - var(--footer-height)) !important;
+  min-height: calc(97.9vh - var(--nav-height) - var(--footer-height)) !important;
 }
 
 /* Scroll bar style */
