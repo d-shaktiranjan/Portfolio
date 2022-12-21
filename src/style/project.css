@@ -1,5 +1,5 @@
 .project-image {
-    width: 488px;
+    width: 458px;
     height: 256px;
     border-radius: 20px;
 }
@@ -16,9 +16,11 @@
 }
 
 .project-section {
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));;
+    gap: 0.5rem;
+    justify-content: space-evenly;
     width: fit-content;
+    margin: 1rem 0;
 }
 
 .project-title {
