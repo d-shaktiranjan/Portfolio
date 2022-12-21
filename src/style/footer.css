@@ -1,15 +1,17 @@
 footer {
     background-color: var(--little-black);
     justify-content: space-around;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    /* width: 100%; */
     height: var(--footer-height);
 }
 
 .social-links {
-    gap: 30px;
-    padding: 30px;
+    justify-content: space-between;
+}
+.social-links span {
+    margin: 1rem;
 }
 
 .social-links span :hover {
