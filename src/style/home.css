@@ -1,5 +1,7 @@
 .home-section {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-self: center;
 }
 
 .home {
