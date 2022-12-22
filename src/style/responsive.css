@@ -1,4 +1,10 @@
 @media screen and (max-width: 1300px) {
+       
+        /* Home Section */
+        .home-section {
+            margin: 1rem 2rem;
+        }
+
         /* Project Section */
         .project-section {
             display: flex;
@@ -23,11 +29,6 @@
 
     #copyText {
         display: none;
-    }
-
-    /* Home Section */
-    .home-section {
-        margin: 1rem 2rem;
     }
 
     /* Skill Section */
@@ -64,6 +65,10 @@
     .home-section {
         flex-direction: column-reverse;
         justify-content: space-between;
+    }
+
+    .home {
+        margin: 2rem 0;
     }
 
     .my-image {
