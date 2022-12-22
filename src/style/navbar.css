@@ -1,6 +1,6 @@
 .navbar {
-    border-radius: 50px;
-    margin: 10px;
+    /* border-radius: 50px; */
+    /* margin: 10px; */
     justify-content: center;
     height: var(--nav-height);
 }
