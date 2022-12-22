@@ -16,7 +16,7 @@ export const Project = (props) => {
 
     return (
         <div className='container flex project-card'>
-            <img className='project-image' src={getProjectImage()} alt="" />
+            <img className='project-image' src={getProjectImage()} alt={projectInfo.projectName} />
             <h3 className='sub-heading project-title accent'>{projectInfo.projectName || "Project Name"}</h3>
             <div className='project-tech'>{tools.join(" | ")}</div>
             <div className='project-details'>

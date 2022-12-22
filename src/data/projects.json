@@ -1,8 +1,8 @@
 [
     {
         "projectName": "E Note Book",
-        "isLocalImage": false,
-        "projectImage": "https://images.unsplash.com/photo-1527345931282-806d3b11967f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+        "isLocalImage": true,
+        "projectImage": "eNoteBook.png",
         "details": "A cloud based notebook storing app.",
         "repoLink": "https://github.com/d-shaktiranjan/E_Note_Book",
         "liveLink": "",
@@ -11,20 +11,6 @@
             "Django",
             "SqLite3",
             "Bootstrap"
-        ]
-    },
-    {
-        "projectName": "Backstack",
-        "isLocalImage": false,
-        "projectImage": "",
-        "details": "A solution for frontend developers to store data from there users.",
-        "repoLink": "",
-        "liveLink": "",
-        "tools": [
-            "React",
-            "Express JS",
-            "Mongo DB",
-            "Node JS"
         ]
     },
     {
@@ -42,8 +28,8 @@
     },
     {
         "projectName": "Web Image Editor",
-        "isLocalImage": false,
-        "projectImage": "",
+        "isLocalImage": true,
+        "projectImage": "webImage.png",
         "details": "An Open CV app, where you can add filter in an images.",
         "repoLink": "https://github.com/d-shaktiranjan/WebImageEditor",
         "liveLink": "",
@@ -55,8 +41,8 @@
     },
     {
         "projectName": "Shortify Visit",
-        "isLocalImage": false,
-        "projectImage": "https://gadgetsbeat.com/wp-content/uploads/2022/04/URL-Shortener-Meaning-Benefits-When-To-Use.jpg",
+        "isLocalImage": true,
+        "projectImage": "shortifyVisit.png",
         "details": "Make link shorter.",
         "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
         "liveLink": "",
@@ -65,6 +51,20 @@
             "Flask",
             "SqLite3",
             "Bootstrap"
+        ]
+    },
+    {
+        "projectName": "Backstack (WIP)",
+        "isLocalImage": false,
+        "projectImage": "",
+        "details": "A solution for frontend developers to store data from there users.",
+        "repoLink": "",
+        "liveLink": "",
+        "tools": [
+            "React",
+            "Express JS",
+            "Mongo DB",
+            "Node JS"
         ]
     },
     {
