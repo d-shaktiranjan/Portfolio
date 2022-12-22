@@ -1,3 +1,13 @@
+@media screen and (max-width: 1300px) {
+        /* Project Section */
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+        }
+}
 @media screen and (max-width: 991px) {
 
     /* Utility */
@@ -25,13 +35,6 @@
         display: grid;
         grid-template-columns: repeat(2, 0.3fr);
         column-gap: 0px;
-    }
-
-    /* Project Section */
-    .project-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
     /* footer section */
