@@ -55,8 +55,8 @@
     },
     {
         "projectName": "Backstack (WIP)",
-        "isLocalImage": false,
-        "projectImage": "",
+        "isLocalImage": true,
+        "projectImage": "backstack.png",
         "details": "A solution for frontend developers to store data from there users.",
         "repoLink": "",
         "liveLink": "",
