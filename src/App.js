@@ -7,6 +7,8 @@ import { SkillSection } from './components/SkillSection';
 import { Route, Routes } from 'react-router-dom';
 import { Projects } from './components/Projects';
 import { NoMatch } from './components/NoMatch';
+import { BlogHome } from './components/BlogHome';
+import { Blog } from './components/Blog';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='skills' element={<SkillSection />} />
         <Route path='projects' element={<Projects />} />
+        <Route path='blog' element={<BlogHome />} />
+        <Route path='/blog/:slug' element={<Blog />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
       <Footer />
