@@ -4,7 +4,7 @@ import { fetchBlogList } from '../utils/blog';
 
 export const BlogHome = () => {
     return (
-        <div>
+        <div className='min-height'>
             <h2 className='accent'>Blog Lists</h2>
             {
                 fetchBlogList().map((item) => (
