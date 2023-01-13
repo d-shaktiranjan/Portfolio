@@ -1,15 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchBlogList, getContentFromWeb } from '../utils/blog';
+import { getContentFromWeb } from '../utils/blog';
 import { NoMatch } from './NoMatch';
 
 export const Blog = () => {
     const params = useParams();
+    const [blogList, setBlogList] = useState([]);
     const [blogContent, updateBlogContent] = useState("");
+
+    //  fetch blog list from web
+    useEffect(() => {
+        const updateBlogList = async () => {
+            const list = await (await getContentFromWeb("https://gist.githubusercontent.com/d-shaktiranjan/d0eda4b2468f55385f03eb9716719cce/raw/11a4221688dc4d48d083829c8e520163b36293ae/blogList.json")).json();
+            setBlogList(list);
+        }
+        updateBlogList();
+    }, [])
 
     // search blog from the list
     let blogData;
-    fetchBlogList().map((item) => {
+    blogList.map((item) => {
         if (item.slug === params.slug) {
             blogData = item;
         }
@@ -17,7 +27,7 @@ export const Blog = () => {
 
     // get blog content from gist link
     const getBlog = async () => {
-        const data = await getContentFromWeb(blogData.fileLink);
+        const data = await (await getContentFromWeb(blogData.fileLink)).text();
         updateBlogContent(data)
     }
     getBlog();
