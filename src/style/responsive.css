@@ -43,6 +43,11 @@
     footer {
         position: static !important;
     }
+
+    /* Blog Section */
+    .blog-home {
+        margin: 0rem 5rem !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -84,6 +89,22 @@
     .project-tech {
         font-size: 15px;
     }
+
+    /* Blog Section */
+    .blog-home {
+        margin: 0rem 1rem !important;
+    }
+
+    .blog-card {
+        margin: 0.1rem !important;
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .blog-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -102,5 +123,12 @@
     .project-card {
         width: 350px;
         height: 390px !important;
+    }
+
+    /* Blog Section */
+    .blog-card-left {
+        flex-direction: column;
+        gap: 0 !important;
+        align-items: baseline;
     }
 }

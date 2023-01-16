@@ -9,7 +9,7 @@ export const NoMatch = () => {
     }, 1000);
     return (
         <div className='container flex min-height no-match'>
-            <div className="main-heading">404</div>
+            <div className="main-heading accent">404</div>
             <div className="main-heading">Page not found</div>
             <div>Redirect to Home in {sec} Sec</div>
             {

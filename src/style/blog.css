@@ -1,0 +1,26 @@
+.blog-home {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0rem 10rem;
+}
+
+
+.blog-card {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.blog-card:hover {
+    background-color: #27272a;
+}
+
+.blog-card-footer {
+    justify-content: space-between;
+    margin-top: 0.7rem;
+    gap: 0.2rem;
+}
+
+.blog-card-left {
+    gap: 1rem;
+}
