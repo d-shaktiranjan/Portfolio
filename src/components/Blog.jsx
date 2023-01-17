@@ -2,16 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getContentFromWeb } from '../utils/blog';
 import { NoMatch } from './NoMatch';
+import '../style/blog.css';
 
 export const Blog = () => {
     const params = useParams();
     const [blogList, setBlogList] = useState([]);
     const [blogContent, updateBlogContent] = useState("");
 
+    // env variables
+    const branch = process.env.REACT_APP_BLOG_BRANCH;
+    const baseUrl = process.env.REACT_APP_BLOG_BASE_URL;
+
     //  fetch blog list from web
     useEffect(() => {
+        console.log(`${baseUrl}/${branch}/about.json`);
         const updateBlogList = async () => {
-            const list = await (await getContentFromWeb("https://gist.githubusercontent.com/d-shaktiranjan/d0eda4b2468f55385f03eb9716719cce/raw/11a4221688dc4d48d083829c8e520163b36293ae/blogList.json")).json();
+            const list = await (await getContentFromWeb(`${baseUrl}/${branch}/about.json`)).json();
             setBlogList(list);
         }
         updateBlogList();
@@ -27,7 +33,8 @@ export const Blog = () => {
 
     // get blog content from gist link
     const getBlog = async () => {
-        const data = await (await getContentFromWeb(blogData.fileLink)).text();
+        const fileLink = `${baseUrl}/${branch}/${blogData.filePath}`;
+        const data = await (await getContentFromWeb(fileLink)).text();
         updateBlogContent(data)
     }
     getBlog();
@@ -39,7 +46,6 @@ export const Blog = () => {
 
     return (
         <div className='min-height'>
-            <h2 className='accent'>{blogData.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: blogContent }} />
         </div>
     )

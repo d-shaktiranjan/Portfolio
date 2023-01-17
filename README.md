@@ -12,7 +12,16 @@ Now, run the following in the project directory
 ```
 yarn install
 ```
-and 
+then make .env file 
+```
+touch .env
+```
+Then add variables
+```
+REACT_APP_BLOG_BRANCH=
+REACT_APP_BLOG_BASE_URL=
+```
+And 
 ```
 yarn start
 ```

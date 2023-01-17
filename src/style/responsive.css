@@ -48,6 +48,10 @@
     .blog-home {
         margin: 0rem 5rem !important;
     }
+
+    .blog-image {
+        width: 30rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -105,6 +109,10 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .blog-image {
+        width: 25rem !important;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -130,5 +138,9 @@
         flex-direction: column;
         gap: 0 !important;
         align-items: baseline;
+    }
+
+    .blog-image {
+        width: 20rem !important;
     }
 }
