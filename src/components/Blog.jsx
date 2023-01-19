@@ -6,8 +6,9 @@ import '../style/blog.css';
 
 export const Blog = () => {
     const params = useParams();
-    const [blogList, setBlogList] = useState([]);
     const [blogContent, updateBlogContent] = useState("");
+    const [blogData, setBlogData] = useState(null);
+    const [waitComplete, setWaitComplete] = useState(false);
 
     // env variables
     const branch = process.env.REACT_APP_BLOG_BRANCH;
@@ -18,18 +19,15 @@ export const Blog = () => {
         console.log(`${baseUrl}/${branch}/about.json`);
         const updateBlogList = async () => {
             const list = await (await getContentFromWeb(`${baseUrl}/${branch}/about.json`)).json();
-            setBlogList(list);
+            list.map((item) => {
+                if (item.slug === params.slug) {
+                    setBlogData(item);
+                }
+            });
+            setWaitComplete(true);
         }
         updateBlogList();
     }, [])
-
-    // search blog from the list
-    let blogData;
-    blogList.map((item) => {
-        if (item.slug === params.slug) {
-            blogData = item;
-        }
-    });
 
     // get blog content from gist link
     const getBlog = async () => {
@@ -40,7 +38,7 @@ export const Blog = () => {
     getBlog();
 
     // if slug is invalid show NoMatch component
-    if (!blogData) {
+    if (!blogData && waitComplete) {
         return (<NoMatch />)
     }
 
