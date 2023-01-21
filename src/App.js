@@ -9,7 +9,6 @@ import { Projects } from './components/Projects';
 import { NoMatch } from './components/NoMatch';
 import { BlogHome } from './components/BlogHome';
 import { Blog } from './components/Blog';
-import { BlogTest } from './components/BlogText';
 
 const App = () => {
   const isInLocal = process.env.REACT_APP_IS_IN_LOCAL === "true";
@@ -21,7 +20,6 @@ const App = () => {
         <Route path='skills' element={<SkillSection />} />
         <Route path='projects' element={<Projects />} />
         <Route path='blog' element={<BlogHome />} />
-        <Route path='blog-test' element={isInLocal ? <BlogTest /> : <NoMatch />} />
         <Route path='/blog/:slug' element={<Blog />} />
         <Route path='*' element={<NoMatch />} />
       </Routes>
