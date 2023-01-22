@@ -10,6 +10,7 @@ export const BlogPart = (props) => {
     const baseUrl = process.env.REACT_APP_BLOG_BASE_URL;
 
     const [code, setCode] = useState();
+    const [isShowCheck, setIsShowCheck] = useState(false);
 
     const fetchCode = async (path, isLocal) => {
         if (!isLocal) {
@@ -19,6 +20,12 @@ export const BlogPart = (props) => {
             const code = await (await getContentFromWeb(`${baseUrl}/${branch}/${path}`)).text();
             setCode(code);
         }
+    }
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(code);
+        setIsShowCheck(true);
+        setTimeout(() => setIsShowCheck(false), 4000);
     }
 
     // check item type & render accoordingly
@@ -42,8 +49,10 @@ export const BlogPart = (props) => {
         fetchCode(props.value[0], props.value[2]);
         return (
             <div className='code-in-side'>
-                <div className='copy-to-clipboard'>
-                    <i className="fa-regular fa-clipboard"></i>
+                <div className='copy-to-clipboard' onClick={copyToClipboard}>
+                    {
+                        isShowCheck ? <i className="fa-solid fa-check accent"></i> : <i className="fa-regular fa-clipboard"></i>
+                    }
                 </div>
                 <SyntaxHighlighter id="rawCode" language={props.value[1]} style={cb} wrapLines={true}>
                     {code}
