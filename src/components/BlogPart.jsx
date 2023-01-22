@@ -11,9 +11,14 @@ export const BlogPart = (props) => {
 
     const [code, setCode] = useState();
 
-    const fetchCode = async (url) => {
-        const code = await (await getContentFromWeb(url)).text();
-        setCode(code);
+    const fetchCode = async (path, isLocal) => {
+        if (!isLocal) {
+            const code = await (await getContentFromWeb(path)).text();
+            setCode(code);
+        } else {
+            const code = await (await getContentFromWeb(`${baseUrl}/${branch}/${path}`)).text();
+            setCode(code);
+        }
     }
 
     // check item type & render accoordingly
@@ -34,7 +39,7 @@ export const BlogPart = (props) => {
         )
     }
     if (type === "code") {
-        fetchCode(props.value[0]);
+        fetchCode(props.value[0], props.value[2]);
         return (
             <div className='code-in-side'>
                 <div className='copy-to-clipboard'>
