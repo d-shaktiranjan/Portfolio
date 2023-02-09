@@ -11,7 +11,6 @@ import { BlogHome } from './components/BlogHome';
 import { Blog } from './components/Blog';
 
 const App = () => {
-  const isInLocal = process.env.REACT_APP_IS_IN_LOCAL === "true";
   return (
     <>
       <Navbar />

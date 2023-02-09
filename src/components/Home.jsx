@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import myImage from '../static/me.png';
 
 export const Home = () => {
+    document.title = "Shakti | Backend Developer";
     return (
         <div className='flex container min-height home-section'>
             <div className="flex home">

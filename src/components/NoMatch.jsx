@@ -3,6 +3,7 @@ import '../style/noMatch.css';
 import { Navigate } from 'react-router-dom';
 
 export const NoMatch = () => {
+    document.title = "Shakti | Backend Developer";
     const [sec, changeSec] = useState(5);
     setInterval(() => {
         changeSec(sec - 1);

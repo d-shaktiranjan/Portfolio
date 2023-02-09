@@ -4,6 +4,7 @@ import { getContentFromWeb } from '../utils/blog';
 import '../style/blog.css';
 
 const BlogCard = (props) => {
+    document.title = "Blogs | Shakti Ranjan Debata";
     const info = props.info;
     return (
         <div className="blog-card">

@@ -42,6 +42,7 @@ export const Blog = () => {
         return (<NoMatch />)
     }
 
+    document.title = `${blogContent.title} | Shakti Ranjan Debata`;
     return (
         <div className='container min-height blog-content'>
             <h1 className="accent underline">{blogContent.title}</h1>
