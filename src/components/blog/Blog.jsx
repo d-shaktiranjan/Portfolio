@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getContentFromWeb } from '../utils/blog';
-import { NoMatch } from './NoMatch';
+import { getContentFromWeb } from '../../utils/blog';
+import { NoMatch } from '../NoMatch';
 import { BlogPart } from './BlogPart';
-import '../style/blog.css';
+import '../../style/blog.css';
 
 export const Blog = () => {
     const params = useParams();

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Skills } from './Skills'
-import '../style/skill.css';
+import '../../style/skill.css';
 
 export const SkillSection = () => {
     document.title = "Skills | Shakti Ranjan Debata";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { getContentFromWeb } from '../utils/blog';
-import '../style/blog.css';
+import { getContentFromWeb } from '../../utils/blog';
+import '../../style/blog.css';
 
 const BlogCard = (props) => {
     document.title = "Blogs | Shakti Ranjan Debata";

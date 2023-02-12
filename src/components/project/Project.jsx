@@ -1,6 +1,6 @@
 import React from 'react';
-import defaultProjectImage from '../static/projectImages/default.png';
-import '../style/project.css';
+import defaultProjectImage from '../../static/projectImages/default.png';
+import '../../style/project.css';
 
 export const Project = (props) => {
     const projectInfo = props.projectInfo;
@@ -8,7 +8,7 @@ export const Project = (props) => {
 
     const getProjectImage = () => {
         if (projectInfo.isLocalImage) {
-            const localImage = require(`../static/projectImages/${projectInfo.projectImage}`);
+            const localImage = require(`../../static/projectImages/${projectInfo.projectImage}`);
             return localImage;
         }
         return projectInfo.projectImage || defaultProjectImage;

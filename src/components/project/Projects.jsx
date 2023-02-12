@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Project } from './Project';
-import projectData from '../data/projects.json';
+import projectData from '../../data/projects.json';
 
 export const Projects = () => {
     useEffect(() => {

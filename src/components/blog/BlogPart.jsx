@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getContentFromWeb } from '../utils/blog';
+import { getContentFromWeb } from '../../utils/blog';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { cb } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
