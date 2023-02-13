@@ -1,10 +1,18 @@
-import React from 'react'
-import { Skill } from './Skill'
+import React from 'react';
+
+const Skill = (props) => {
+    return (
+        <div className='flex skill'>
+            <img className='skill-img' src={props.img} alt={props.title} />
+            <div>{props.title}</div>
+        </div>
+    )
+}
 
 export const Skills = (props) => {
     const getImagePath = (item) => {
         const fileName = item.toLowerCase();
-        const img = require(`../static/icons/${fileName}.svg`);
+        const img = require(`../../static/icons/${fileName}.svg`);
         return img;
     }
     return (

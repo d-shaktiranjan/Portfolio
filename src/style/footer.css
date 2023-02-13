@@ -1,20 +1,15 @@
 footer {
     background-color: var(--little-black);
     justify-content: space-around;
-    /* position: absolute;
-    bottom: 0; */
-    /* width: 100%; */
     height: var(--footer-height);
 }
 
 .social-links {
-    justify-content: space-between;
-}
-.social-links span {
-    margin: 1rem;
+    justify-content: space-evenly;
+    transition: 0.7s ease;
+    gap: 3rem;
 }
 
 .social-links span :hover {
     color: var(--accent-color);
-    transition: 0.7s ease;
 }

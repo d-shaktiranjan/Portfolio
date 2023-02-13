@@ -9,7 +9,8 @@ export const Navbar = () => {
                 <ul className='nav-links'>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/skills">Skills</NavLink></li>
-                    <li className='active-NavLink'><NavLink to="/projects">Projects</NavLink></li>
+                    <li><NavLink to="/projects">Projects</NavLink></li>
+                    <li><NavLink to="/blog">Blog</NavLink></li>
                 </ul>
             </nav>
         </div>
