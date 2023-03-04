@@ -9,9 +9,11 @@ export const BlogPart = (props) => {
     const branch = process.env.REACT_APP_BLOG_BRANCH;
     const baseUrl = process.env.REACT_APP_BLOG_BASE_URL;
 
+    // state variables
     const [code, setCode] = useState();
     const [isShowCheck, setIsShowCheck] = useState(false);
 
+    // fetch code from BlogData repo
     const fetchCode = async (path, isLocal) => {
         if (!isLocal) {
             const code = await (await getContentFromWeb(path)).text();
@@ -28,11 +30,16 @@ export const BlogPart = (props) => {
         setTimeout(() => setIsShowCheck(false), 4000);
     }
 
-    // check item type & render accoordingly
+    // checking item type & render components accoordingly
     const type = props.itemName.split("-")[0];
     if (type === "text") {
         return (
             <div>{props.value}</div>
+        )
+    }
+    if (type === "textSpan") {
+        return (
+            <span>{props.value}</span>
         )
     }
     if (type === "heading") {
@@ -64,6 +71,11 @@ export const BlogPart = (props) => {
                     {code}
                 </SyntaxHighlighter>
             </div>
+        )
+    }
+    if (type === "link") {
+        return (
+            <a href={props.value[1]} target="_blank" className='accent'>{props.value[0]}</a>
         )
     }
     return (
