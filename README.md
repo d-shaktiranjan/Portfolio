@@ -26,3 +26,6 @@ And
 ```
 yarn start
 ```
+
+#### LICENSE
+[Apache License](./LICENSE)
