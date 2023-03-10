@@ -9,12 +9,12 @@ export const BlogLoading = () => {
         <SkeletonTheme baseColor="#202020" highlightColor="rgb(248, 202, 202)">
             <h1><Skeleton height="2.5rem" width="50%" /></h1>
             <div className='blog-card-left flex accent margin-block'>
-                <div>
-                    <i className="fa-solid fa-user margin-right"></i>
+                <div className='flex'>
+                    <Skeleton width={30} circle height={30} className="margin-right-big" />
                     <Skeleton width={200} height={30} className="margin-right-big" />
                 </div>
-                <div>
-                    <i className="fa-solid fa-calendar-days margin-right"></i>
+                <div className='flex'>
+                    <Skeleton width={30} circle height={30} className="margin-right-big" />
                     <Skeleton width={200} height={30} />
                 </div>
             </div>
