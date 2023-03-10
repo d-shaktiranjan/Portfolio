@@ -108,7 +108,19 @@ ul li {
 }
 
 .min-height {
-  min-height:82vh;
+  min-height: 82vh;
+}
+
+.margin-block {
+  margin-block: 1rem;
+}
+
+.margin-right {
+  margin-right: 0.5rem;
+}
+
+.margin-right-big {
+  margin-right: 1rem;
 }
 
 /* Scroll bar style */
