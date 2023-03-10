@@ -34,10 +34,12 @@ export const Blog = () => {
     const getBlog = async () => {
         const fileLink = `${baseUrl}/${branch}/${blogData.filePath}/blog.json`;
         const data = await (await getContentFromWeb(fileLink)).json();
+
+        // set 250ms delay to show react-skeleton-loading
         setTimeout(() => {
             setBlogContent(data)
             setIsLoadingComplete(true);
-        }, 500);
+        }, 250);
     }
 
     useEffect(() => {
