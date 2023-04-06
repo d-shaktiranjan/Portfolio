@@ -30,9 +30,9 @@ export const BlogHome = () => {
 
     //  fetch blog list from web
     const updateBlogList = async () => {
-        const baseBurl = process.env.REACT_APP_BLOG_BASE_URL;
-        const branch = process.env.REACT_APP_BLOG_BRANCH;
-        const list = await (await getContentFromWeb(`${baseBurl}/${branch}/about.json`)).json();
+        const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
+        const branch = import.meta.env.VITE_BLOG_BRANCH;
+        const list = await (await getContentFromWeb(`${baseUrl}/${branch}/about.json`)).json();
         setBlogList(list);
     }
 

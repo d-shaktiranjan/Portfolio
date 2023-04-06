@@ -16,8 +16,8 @@ export const Blog = () => {
     const [isLoadingComplete, setIsLoadingComplete] = useState(false);
 
     // env variables
-    const branch = process.env.REACT_APP_BLOG_BRANCH;
-    const baseUrl = process.env.REACT_APP_BLOG_BASE_URL;
+    const branch = import.meta.env.VITE_BLOG_BRANCH;
+    const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
 
     //  fetch blog list from web
     const updateBlogList = async () => {

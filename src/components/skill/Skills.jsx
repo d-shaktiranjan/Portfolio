@@ -1,4 +1,5 @@
 import React from 'react';
+import reactImage from '../../static/icons/linux.svg';
 
 const Skill = (props) => {
     return (
@@ -12,7 +13,7 @@ const Skill = (props) => {
 export const Skills = (props) => {
     const getImagePath = (item) => {
         const fileName = item.toLowerCase();
-        const img = require(`../../static/icons/${fileName}.svg`);
+        // const img = require(`../../static/icons/${fileName}.svg`);
         return img;
     }
     return (
@@ -21,7 +22,7 @@ export const Skills = (props) => {
             <div className='grid skills'>
                 {
                     props.list.map((item) => (
-                        <Skill title={item} img={getImagePath(item)} />
+                        <Skill title={item} img={reactImage} />
                     ))
                 }
             </div>

@@ -8,7 +8,7 @@ export const Project = (props) => {
 
     const getProjectImage = () => {
         if (projectInfo.isLocalImage) {
-            const localImage = require(`../../static/projectImages/${projectInfo.projectImage}`);
+            // const localImage = require(`../../static/projectImages/${projectInfo.projectImage}`);
             return localImage;
         }
         return projectInfo.projectImage || defaultProjectImage;
@@ -16,7 +16,7 @@ export const Project = (props) => {
 
     return (
         <div className='container flex project-card'>
-            <img className='project-image' src={getProjectImage()} alt={projectInfo.projectName} />
+            <img className='project-image' src={defaultProjectImage} alt={projectInfo.projectName} />
             <h3 className='sub-heading project-title accent'>{projectInfo.projectName || "Project Name"}</h3>
             <div className='project-tech'>{tools.join(" | ")}</div>
             <div className='project-details'>

@@ -6,8 +6,8 @@ import { cb } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export const BlogPart = (props) => {
 
     // env variables
-    const branch = process.env.REACT_APP_BLOG_BRANCH;
-    const baseUrl = process.env.REACT_APP_BLOG_BASE_URL;
+    const branch = import.meta.env.VITE_BLOG_BRANCH;
+    const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
 
     // state variables
     const [code, setCode] = useState();
