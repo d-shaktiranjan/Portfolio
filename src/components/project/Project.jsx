@@ -1,22 +1,31 @@
-import React from 'react';
 import defaultProjectImage from '../../static/projectImages/default.png';
 import '../../style/project.css';
+import { useState, useEffect } from 'react';
 
 export const Project = (props) => {
     const projectInfo = props.projectInfo;
     const tools = projectInfo.tools;
 
-    const getProjectImage = () => {
+    const [projectImage, setProjectImage] = useState();
+
+    // get image path & set in state variables
+    const getProjectImage = async () => {
         if (projectInfo.isLocalImage) {
-            // const localImage = require(`../../static/projectImages/${projectInfo.projectImage}`);
-            return localImage;
-        }
-        return projectInfo.projectImage || defaultProjectImage;
+            const fileName = projectInfo.projectImage.split(".")[0];
+            const imagePromise = await import(`../../static/projectImages/${fileName}.png`);
+            const localImage = imagePromise.default;
+            if (localImage == undefined) setProjectImage(defaultProjectImage);
+            else setProjectImage(imagePromise.default);
+        } else setProjectImage(projectInfo.projectImage);
     }
+
+    useEffect(() => {
+        getProjectImage();
+    }, []);
 
     return (
         <div className='container flex project-card'>
-            <img className='project-image' src={defaultProjectImage} alt={projectInfo.projectName} />
+            <img className='project-image' src={projectImage} alt={projectInfo.projectName} />
             <h3 className='sub-heading project-title accent'>{projectInfo.projectName || "Project Name"}</h3>
             <div className='project-tech'>{tools.join(" | ")}</div>
             <div className='project-details'>

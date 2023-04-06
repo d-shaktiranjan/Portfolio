@@ -1,28 +1,35 @@
 import React from 'react';
-import reactImage from '../../static/icons/linux.svg';
+import { useState, useEffect } from 'react';
 
 const Skill = (props) => {
+    const [itemFullPath, setItemFullPath] = useState();
+
+    // get svg path & set in state variables
+    const getImagePath = async (itemTitle) => {
+        const svgFile = await import(`../../static/icons/${itemTitle.toLowerCase()}.svg`);
+        setItemFullPath(svgFile.default);
+    }
+
+    useEffect(() => {
+        getImagePath(props.title);
+    }, []);
+
     return (
         <div className='flex skill'>
-            <img className='skill-img' src={props.img} alt={props.title} />
+            <img className='skill-img' src={itemFullPath} alt={props.title} />
             <div>{props.title}</div>
         </div>
     )
 }
 
 export const Skills = (props) => {
-    const getImagePath = (item) => {
-        const fileName = item.toLowerCase();
-        // const img = require(`../../static/icons/${fileName}.svg`);
-        return img;
-    }
     return (
         <div>
             <h1 className='sub-heading underline accent'>{props.heading}</h1>
             <div className='grid skills'>
                 {
                     props.list.map((item) => (
-                        <Skill title={item} img={reactImage} />
+                        <Skill title={item} />
                     ))
                 }
             </div>
