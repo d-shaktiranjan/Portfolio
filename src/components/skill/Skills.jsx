@@ -1,8 +1,8 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
+import transparentSvg from '../../static/icons/transparent.svg';
 
 const Skill = (props) => {
-    const [itemFullPath, setItemFullPath] = useState();
+    const [itemFullPath, setItemFullPath] = useState(transparentSvg);
 
     // get svg path & set in state variables
     const getImagePath = async (itemTitle) => {
