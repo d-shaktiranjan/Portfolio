@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+// react hooks imports
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+// utils & style imports
 import { getContentFromWeb } from '../../utils/blog';
+import '../../style/blog.css';
+
+// components imports
 import { NoMatch } from '../NoMatch';
 import { BlogPart } from './BlogPart';
 import { BlogLoading } from './BlogLoading';
-import '../../style/blog.css';
 
 export const Blog = () => {
     const params = useParams();
@@ -42,10 +47,12 @@ export const Blog = () => {
         }, 250);
     }
 
+    // update blog list before load the page
     useEffect(() => {
         updateBlogList();
     }, []);
 
+    // update blogContent after blogData fetched
     useEffect(() => {
         getBlog()
     }, [blogData]);

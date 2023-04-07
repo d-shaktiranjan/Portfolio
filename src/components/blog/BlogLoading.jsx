@@ -1,5 +1,3 @@
-import React from 'react';
-
 // React Loading Skeleton imports
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';

@@ -1,9 +1,11 @@
+import { useState, useEffect } from 'react';
+
+// image & style imports
 import defaultProjectImage from '../../static/projectImages/default.png';
 import transparentImage from '../../static/projectImages/transparent.png'
 import '../../style/project.css';
-import { useState, useEffect } from 'react';
 
-export const Project = (props) => {
+export const ProjectCard = (props) => {
     const projectInfo = props.projectInfo;
     const tools = projectInfo.tools;
 
@@ -20,6 +22,7 @@ export const Project = (props) => {
         } else setProjectImage(projectInfo.projectImage);
     }
 
+    // get project image & set, before page loading
     useEffect(() => {
         getProjectImage();
     }, []);

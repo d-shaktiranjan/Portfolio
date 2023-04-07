@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getContentFromWeb } from '../../utils/blog';
 import '../../style/blog.css';
 
+/*  BlogCard sub component, it render Blog title, about, author, date & readmore button,
+    And whole card is clickable. */
 const BlogCard = (props) => {
     document.title = "Blogs | Shakti Ranjan Debata";
     const info = props.info;
@@ -36,6 +38,7 @@ export const BlogHome = () => {
         setBlogList(list);
     }
 
+    // update blogList, before page loading
     useEffect(() => {
         updateBlogList();
     }, [])

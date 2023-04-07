@@ -1,4 +1,3 @@
-import React from 'react';
 import '../style/home.css';
 import { Link } from 'react-router-dom';
 import myImage from '../static/me.png';

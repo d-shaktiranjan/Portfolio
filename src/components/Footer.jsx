@@ -1,4 +1,3 @@
-import React from 'react';
 import '../style/footer.css';
 import about from '../data/about.json';
 

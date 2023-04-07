@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Project } from './Project';
+import { useEffect } from 'react';
+import { ProjectCard } from './ProjectCard';
 import projectData from '../../data/projects.json';
 
 export const Projects = () => {
@@ -10,7 +10,7 @@ export const Projects = () => {
         <div className='container grid project-section'>
             {
                 projectData.map((item) => (
-                    <Project projectInfo={item} />
+                    <ProjectCard projectInfo={item} />
                 ))
             }
         </div>

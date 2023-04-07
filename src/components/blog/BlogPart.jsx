@@ -32,21 +32,26 @@ export const BlogPart = (props) => {
 
     // checking item type & render components accoordingly
     const type = props.itemName.split("-")[0];
+    // if type is text render in div
     if (type === "text") {
         return (
             <div>{props.value}</div>
         )
     }
+
     if (type === "textSpan") {
         return (
             <span>{props.value}</span>
         )
     }
+
     if (type === "heading") {
         return (
             <h3 className='accent blog-heading'>{props.value}</h3>
         )
     }
+
+    // if type is image, then fetch image & render
     if (type === "image") {
         if (props.value[1]) {
             const localPath = `${baseUrl}/${branch}/${props.value[0]}`;
@@ -58,6 +63,8 @@ export const BlogPart = (props) => {
             <img className='blog-image' src={props.value} alt="Unable to load" />
         )
     }
+
+    // if type is code, then fetch code & place inside SyntaxHighlighter tag
     if (type === "code") {
         fetchCode(props.value[0], props.value[2]);
         return (
@@ -73,11 +80,13 @@ export const BlogPart = (props) => {
             </div>
         )
     }
+
     if (type === "link") {
         return (
             <a href={props.value[1]} target="_blank" className='accent'>{props.value[0]}</a>
         )
     }
+
     return (
         <p>{props.value}</p>
     )
