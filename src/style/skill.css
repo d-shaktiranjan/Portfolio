@@ -16,5 +16,6 @@
 
 .skill-section {
     justify-content: space-evenly;
-    /* align-items: baseline */
+    align-items: baseline;
+    padding-top: 10%;
 }
