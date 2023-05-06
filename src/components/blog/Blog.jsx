@@ -26,7 +26,7 @@ export const Blog = () => {
 
     //  fetch blog list from web
     const updateBlogList = async () => {
-        const list = await (await getContentFromWeb(`${baseUrl}/${branch}/about.json`)).json();
+        const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
         list.map((item) => {
             if (item.slug === params.slug) {
                 setBlogData(item);
@@ -38,7 +38,7 @@ export const Blog = () => {
     // get blog content from gist link
     const getBlog = async () => {
         const fileLink = `${baseUrl}/${branch}/${blogData.filePath}/blog.json`;
-        const data = await (await getContentFromWeb(fileLink)).json();
+        const data = await getContentFromWeb(fileLink);
 
         // set 250ms delay to show react-skeleton-loading
         setTimeout(() => {

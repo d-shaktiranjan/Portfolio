@@ -16,10 +16,10 @@ export const BlogPart = (props) => {
     // fetch code from BlogData repo
     const fetchCode = async (path, isLocal) => {
         if (!isLocal) {
-            const code = await (await getContentFromWeb(path)).text();
+            const code = await getContentFromWeb(path, false);
             setCode(code);
         } else {
-            const code = await (await getContentFromWeb(`${baseUrl}/${branch}/${path}`)).text();
+            const code = await getContentFromWeb(`${baseUrl}/${branch}/${path}`, false);
             setCode(code);
         }
     }

@@ -34,7 +34,7 @@ export const BlogHome = () => {
     const updateBlogList = async () => {
         const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
         const branch = import.meta.env.VITE_BLOG_BRANCH;
-        const list = await (await getContentFromWeb(`${baseUrl}/${branch}/about.json`)).json();
+        const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
         setBlogList(list);
     }
 
