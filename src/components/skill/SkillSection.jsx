@@ -4,10 +4,10 @@ import '../../style/skill.css';
 export const SkillSection = () => {
     document.title = "Skills | Shakti Ranjan Debata";
 
-    const lanageList = ["Java", "Python", "Java Script", "Node JS", "HTML", "CSS"];
-    const frameworkLibList = ["React", "Express JS", "Django", "Flask", "Bootstrap"];
+    const lanageList = ["Java", "Python", "Java Script", "Node JS", "PHP", "HTML & CSS"];
+    const frameworkLibList = ["React", "Express JS", "Django", "Flask", "Bootstrap", "Tailwind"];
     const techTools = ["Linux", "Git", "Docker", "Mongo DB"];
-    const learningTech = ["React Native", "Typescript", "NEXT.js", "DSA"];
+    const learningTech = ["React Native", "Typescript", "NEXT.js", "DSA", "DRF"];
 
     return (
         <div className='flex skill-section min-height'>
