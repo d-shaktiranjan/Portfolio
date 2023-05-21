@@ -57,3 +57,14 @@
     margin-left: -15rem;
     cursor: pointer;
 }
+
+/* no internet  */
+.no-internet {
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - var(--footer-height) - var(--nav-height));
+}
+
+.no-internet-image {
+    width: 15%;
+}

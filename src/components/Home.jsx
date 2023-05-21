@@ -20,7 +20,7 @@ export const Home = () => {
                     I'm a Computer Science Engineering student passout from CV Raman Global University.
                 </span>
                 {showCompanySection && <span>
-                    Currently working on <a href={companyUrl} target='__blank' className='accent'>{companyName} </a>
+                    Currently working in <a href={companyUrl} target='__blank' className='accent'>{companyName} </a>
                     as a {roleInCompany}.
                 </span>}
                 <Link to="/skills" className='primary-btn block accent'>Explore Skills <i className="fa-solid fa-arrow-right"></i></Link>
