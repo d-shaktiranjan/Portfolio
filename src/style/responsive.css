@@ -123,6 +123,11 @@
     .blog-content {
         width: 90% !important;
     }
+
+    /* no internet  */
+    .no-internet-image {
+        width: 25% !important;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -152,5 +157,14 @@
 
     .blog-image {
         width: 20rem !important;
+    }
+
+    /* no internet  */
+    .no-internet-text {
+        align-items: baseline;
+    }
+
+    .no-internet-image {
+        width: 25% !important;
     }
 }

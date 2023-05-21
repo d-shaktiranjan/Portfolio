@@ -4,6 +4,44 @@ import { getContentFromWeb } from '../../utils/blog';
 import '../../style/blog.css';
 import noInternetIcon from '../../static/no-internet.png'
 
+export const BlogHome = () => {
+    const [blogList, setBlogList] = useState([]);
+    const [isWaitOver, setIsWaitOver] = useState(false);
+
+    //  fetch blog list from web
+    const updateBlogList = async () => {
+        try {
+            const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
+            const branch = import.meta.env.VITE_BLOG_BRANCH;
+            const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
+            setBlogList(list);
+        } catch (error) {
+        } finally {
+            setIsWaitOver(true);
+        }
+    }
+
+    // update blogList, before page loading
+    useEffect(() => {
+        updateBlogList();
+    }, [])
+
+    return (
+        <div className='min-height blog-home'>
+            {isWaitOver && blogList.length === 0 ?
+                <NoInternet /> :
+                <div>
+                    {
+                        blogList.map((item, index) => (
+                            <BlogCard info={item} />
+                        ))
+                    }
+                </div>
+            }
+        </div>
+    )
+}
+
 /*  BlogCard sub component, it render Blog title, about, author, date & readmore button,
     And whole card is clickable. */
 const BlogCard = (props) => {
@@ -28,45 +66,19 @@ const BlogCard = (props) => {
     );
 }
 
-export const BlogHome = () => {
-    const [blogList, setBlogList] = useState([]);
-    const [isWaitOver, setIsWaitOver] = useState(false);
-
-    //  fetch blog list from web
-    const updateBlogList = async () => {
-        const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
-        const branch = import.meta.env.VITE_BLOG_BRANCH;
-        const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
-        setBlogList(list);
-        setIsWaitOver(true);
-    }
-
-    // update blogList, before page loading
-    useEffect(() => {
-        updateBlogList();
-    }, [])
-
+const NoInternet = () => {
     return (
-        <div className='min-height blog-home'>
-            {isWaitOver ?
+        <div className='no-internet flex'>
+            <img src={noInternetIcon} className='no-internet-image' alt="No Internet" />
+            <div className='main-heading accent'>Ooops!</div>
+            <div className="flex no-internet-text">
                 <div>
-                    {
-                        blogList.map((item, index) => (
-                            <BlogCard info={item} />
-                        ))
-                    }
-                </div> :
-                <div className='no-internet flex'>
-                    <img src={noInternetIcon} className='no-internet-image' alt="No Internet" />
-                    <div className='main-heading accent'>Ooops!</div>
-                    <div>
-                        There's maybe some network issues on your side.
-                    </div>
-                    <div>
-                        Try changing your DNS settings or network.
-                    </div>
+                    There's maybe some network issues on your side.
                 </div>
-            }
+                <div>
+                    Try changing your DNS settings or network.
+                </div>
+            </div>
         </div>
     )
 }

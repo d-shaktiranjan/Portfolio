@@ -68,3 +68,7 @@
 .no-internet-image {
     width: 15%;
 }
+
+.no-internet-text {
+    flex-direction: column;
+}
