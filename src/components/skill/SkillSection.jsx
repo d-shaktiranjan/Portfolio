@@ -7,7 +7,7 @@ export const SkillSection = () => {
     const lanageList = ["Java", "Python", "Java Script", "Node JS", "PHP", "HTML & CSS"];
     const frameworkLibList = ["React", "Express JS", "Django", "Flask", "Bootstrap", "Tailwind"];
     const techTools = ["Linux", "Git", "Docker", "Mongo DB"];
-    const learningTech = ["React Native", "Typescript", "NEXT.js", "DSA", "DRF"];
+    const learningTech = ["React Native", "Typescript", "NEXT.js", "FastAPI", "DSA", "DRF"];
 
     return (
         <div className='flex skill-section min-height'>
