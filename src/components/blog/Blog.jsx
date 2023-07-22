@@ -72,7 +72,7 @@ export const Blog = () => {
                     <span><i className="fa-solid fa-calendar-days"></i> {blogContent.releaseData}</span>
                 </div>
                 {
-                    blogContent.order.map((item) => (
+                    Object.keys(blogContent.blogContent).map((item) => (
                         <BlogPart itemName={item} value={blogContent.blogContent[item]} />
                     ))
                 }
