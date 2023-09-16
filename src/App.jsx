@@ -1,31 +1,28 @@
-import './style/style.css';
-import './style/responsive.css';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
-import { Home } from './components/Home';
+import "./style/style.css";
+import "./style/responsive.css";
+
 import { Route, Routes } from 'react-router-dom';
-// component imports
-import { SkillSection } from './components/skill/SkillSection';
-import { Projects } from './components/project/Projects';
-import { NoMatch } from './components/NoMatch';
-import { BlogHome } from './components/blog/BlogHome';
-import { Blog } from './components/blog/Blog';
+
+import {
+  Navbar, Footer, Home, SkillSection,
+  Projects, BlogHome, Blog, NoMatch
+} from "./components";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='skills' element={<SkillSection />} />
-        <Route path='projects' element={<Projects />} />
-        <Route path='blog' element={<BlogHome />} />
-        <Route path='/blog/:slug' element={<Blog />} />
-        <Route path='*' element={<NoMatch />} />
+        <Route path="/" element={<Home />} />
+        <Route path="skills" element={<SkillSection />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="blog" element={<BlogHome />} />
+        <Route path="/blog/:slug" element={<Blog />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />
     </>
   );
-}
+};
 
 export default App;
