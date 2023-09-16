@@ -28,8 +28,8 @@ export const Skills = (props) => {
             <h1 className='sub-heading underline accent'>{props.heading}</h1>
             <div className='grid skills'>
                 {
-                    props.list.map((item) => (
-                        <Skill title={item} />
+                    props.list.map((item, index) => (
+                        <Skill title={item} key={index} />
                     ))
                 }
             </div>

@@ -33,7 +33,7 @@ export const BlogHome = () => {
                 <div>
                     {
                         blogList.map((item, index) => (
-                            <BlogCard info={item} />
+                            <BlogCard info={item} key={index} />
                         ))
                     }
                 </div>

@@ -16,7 +16,7 @@ export const Blog = () => {
 
     // state variables
     const [blogContent, setBlogContent] = useState({ "order": [] });
-    const [blogData, setBlogData] = useState(null);
+    const [blogData, setBlogData] = useState({});
     const [waitComplete, setWaitComplete] = useState(false);
     const [isLoadingComplete, setIsLoadingComplete] = useState(false);
 
