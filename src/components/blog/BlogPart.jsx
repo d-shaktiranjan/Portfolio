@@ -81,6 +81,33 @@ export const BlogPart = (props) => {
         )
     }
 
+    // checking for list type
+    if (type === "list") {
+        const { type, data } = props.value
+
+        if (type === "ul") {
+            return (
+                <ul className='list-ol'>
+                    {data.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+            );
+
+        } else if (type === "ol") {
+            return (
+                <ol>
+                    {data.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ol>
+            );
+        } else {
+            // Handle other cases if necessary
+            return <div>Unsupported list type: {type}</div>;
+        }
+    }
+
     if (type === "link") {
         return (
             <a href={props.value[1]} target="_blank" className='accent'>{props.value[0]}</a>
