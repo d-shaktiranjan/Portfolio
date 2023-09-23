@@ -34,13 +34,13 @@ a {
   display: inline;
 }
 
-ul {
+nav ul {
   list-style: none;
   padding: 10px;
   font-size: large;
 }
 
-ul li {
+nav ul li {
   display: inline;
 }
 
