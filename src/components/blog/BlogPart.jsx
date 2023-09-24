@@ -87,7 +87,7 @@ export const BlogPart = (props) => {
 
         if (type === "ul") {
             return (
-                <ul className='list-ol'>
+                <ul className='list-view'>
                     {data.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
@@ -96,7 +96,7 @@ export const BlogPart = (props) => {
 
         } else if (type === "ol") {
             return (
-                <ol>
+                <ol className='list-view'>
                     {data.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}

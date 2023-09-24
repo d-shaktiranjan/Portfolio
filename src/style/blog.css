@@ -72,3 +72,7 @@
 .no-internet-text {
     flex-direction: column;
 }
+
+.list-view{
+    margin-left: 1rem;
+}
