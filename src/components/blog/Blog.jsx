@@ -22,11 +22,10 @@ export const Blog = () => {
 
     // env variables
     const branch = import.meta.env.VITE_BLOG_BRANCH;
-    const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
 
     //  fetch blog list from web
     const updateBlogList = async () => {
-        const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
+        const list = await getContentFromWeb(`/api/${branch}/about.json`);
         list.map((item) => {
             if (item.slug === params.slug) {
                 setBlogData(item);
@@ -37,7 +36,7 @@ export const Blog = () => {
 
     // get blog content from gist link
     const getBlog = async () => {
-        const fileLink = `${baseUrl}/${branch}/${blogData.filePath}/blog.json`;
+        const fileLink = `/api/${branch}/${blogData.filePath}/blog.json`;
         const data = await getContentFromWeb(fileLink);
 
         // set 250ms delay to show react-skeleton-loading
