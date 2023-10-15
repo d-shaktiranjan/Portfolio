@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: "https://raw.githubusercontent.com/d-shaktiranjan/blogData",
+				target: "https://gitlab.com/d-shaktiranjan/BlogData/-/raw/",
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, ""),
 			},

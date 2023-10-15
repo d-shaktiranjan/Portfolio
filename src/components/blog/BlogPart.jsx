@@ -7,7 +7,6 @@ export const BlogPart = (props) => {
 
     // env variables
     const branch = import.meta.env.VITE_BLOG_BRANCH;
-    const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
 
     // state variables
     const [code, setCode] = useState();
@@ -19,7 +18,7 @@ export const BlogPart = (props) => {
             const code = await getContentFromWeb(path, false);
             setCode(code);
         } else {
-            const code = await getContentFromWeb(`${baseUrl}/${branch}/${path}`, false);
+            const code = await getContentFromWeb(`/api/${branch}/${path}`, false);
             setCode(code);
         }
     }
@@ -54,7 +53,7 @@ export const BlogPart = (props) => {
     // if type is image, then fetch image & render
     if (type === "image") {
         if (props.value[1]) {
-            const localPath = `${baseUrl}/${branch}/${props.value[0]}`;
+            const localPath = `/api/${branch}/${props.value[0]}`;
             return (
                 <img className='blog-image' src={localPath} alt="Unable to load" />
             )
