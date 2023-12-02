@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { getContentFromWeb } from "../../utils/blog";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { cb } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -108,7 +108,12 @@ export const BlogPart = (props) => {
 
   if (type === "link") {
     return (
-      <a href={props.value[1]} target="_blank" className="accent">
+      <a
+        href={props.value[1]}
+        target="_blank"
+        rel="noreferrer"
+        className="accent"
+      >
         {props.value[0]}
       </a>
     );

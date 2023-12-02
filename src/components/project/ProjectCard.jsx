@@ -27,7 +27,7 @@ export const ProjectCard = (props) => {
   // get project image & set, before page loading
   useEffect(() => {
     getProjectImage();
-  }, []);
+  });
 
   return (
     <div className="container flex project-card">

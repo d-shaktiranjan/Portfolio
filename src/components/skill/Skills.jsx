@@ -14,7 +14,7 @@ const Skill = (props) => {
 
   useEffect(() => {
     getImagePath(props.title);
-  }, []);
+  });
 
   return (
     <div className="flex skill">

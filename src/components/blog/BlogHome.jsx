@@ -16,6 +16,7 @@ export const BlogHome = () => {
       const list = await getContentFromWeb(`/api/${branch}/about.json`);
       setBlogList(list);
     } catch (error) {
+      console.log(error);
     } finally {
       setIsWaitOver(true);
     }
@@ -81,7 +82,7 @@ const NoInternet = () => {
       />
       <div className="main-heading accent">Ooops!</div>
       <div className="flex no-internet-text">
-        <div>There's maybe some network issues on your side.</div>
+        <div>There&apos;s maybe some network issues on your side.</div>
         <div>Try changing your DNS settings or network.</div>
       </div>
     </div>

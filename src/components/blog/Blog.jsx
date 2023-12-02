@@ -34,27 +34,26 @@ export const Blog = () => {
     setWaitComplete(true);
   };
 
-  // get blog content from gist link
-  const getBlog = async () => {
-    const fileLink = `/api/${branch}/${blogData.filePath}/blog.json`;
-    const data = await getContentFromWeb(fileLink);
-
-    // set 250ms delay to show react-skeleton-loading
-    setTimeout(() => {
-      setBlogContent(data);
-      setIsLoadingComplete(true);
-    }, 250);
-  };
-
   // update blog list before load the page
   useEffect(() => {
     updateBlogList();
-  }, []);
+  });
 
   // update blogContent after blogData fetched
   useEffect(() => {
+    // get blog content from gist link
+    const getBlog = async () => {
+      const fileLink = `/api/${branch}/${blogData.filePath}/blog.json`;
+      const data = await getContentFromWeb(fileLink);
+
+      // set 250ms delay to show react-skeleton-loading
+      setTimeout(() => {
+        setBlogContent(data);
+        setIsLoadingComplete(true);
+      }, 250);
+    };
     getBlog();
-  }, [blogData]);
+  }, [blogData, branch]);
 
   // if slug is invalid show NoMatch component
   if (!blogData && waitComplete) {
@@ -78,8 +77,12 @@ export const Blog = () => {
               {blogContent.releaseData}
             </span>
           </div>
-          {Object.keys(blogContent.blogContent).map((item) => (
-            <BlogPart itemName={item} value={blogContent.blogContent[item]} />
+          {Object.keys(blogContent.blogContent).map((item, index) => (
+            <BlogPart
+              itemName={item}
+              value={blogContent.blogContent[item]}
+              key={index}
+            />
           ))}
         </>
       ) : (
