@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&family=Open+Sans&display=swap");
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@
 body {
   background-color: var(--background-color);
   color: var(--primary-text-color);
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   /* font-family: 'Open Sans', sans-serif; */
   height: 80vh !important;
 }
@@ -127,9 +127,9 @@ nav ul li {
 ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: var(--background-color)
+  background-color: var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-color)
+  background: var(--accent-color);
 }

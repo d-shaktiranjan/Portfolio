@@ -1,23 +1,23 @@
 .navbar {
-    /* border-radius: 50px; */
-    /* margin: 10px; */
-    justify-content: center;
-    height: var(--nav-height);
+  /* border-radius: 50px; */
+  /* margin: 10px; */
+  justify-content: center;
+  height: var(--nav-height);
 }
 
 .nav-links li {
-    margin: 20px;
-    flex-direction: row;
+  margin: 20px;
+  flex-direction: row;
 }
 
 .nav-links li:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 ul .active {
-    font-weight: bold;
-    color: var(--accent-color);
-    text-decoration: underline;
-    text-underline-offset: 5px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
