@@ -1,35 +1,14 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getContentFromWeb } from "../../utils/blog";
 
 import "../../style/blog.css";
 import noInternetIcon from "../../static/no-internet.png";
+import blogList from "../../data/blog/about.json";
 
 export const BlogHome = () => {
-  const [blogList, setBlogList] = useState([]);
-  const [isWaitOver, setIsWaitOver] = useState(false);
-
-  //  fetch blog list from web
-  const updateBlogList = async () => {
-    try {
-      const branch = import.meta.env.VITE_BLOG_BRANCH;
-      const list = await getContentFromWeb(`/api/${branch}/about.json`);
-      setBlogList(list);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsWaitOver(true);
-    }
-  };
-
-  // update blogList, before page loading
-  useEffect(() => {
-    updateBlogList();
-  }, []);
-
   return (
     <div className="min-height blog-home">
-      {isWaitOver && blogList.length === 0 ? (
+      {blogList.length === 0 ? (
         <NoInternet />
       ) : (
         <div>

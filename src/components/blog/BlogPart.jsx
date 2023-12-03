@@ -4,22 +4,30 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { cb } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const BlogPart = (props) => {
-  // env variables
-  const branch = import.meta.env.VITE_BLOG_BRANCH;
-
   // state variables
   const [code, setCode] = useState();
   const [isShowCheck, setIsShowCheck] = useState(false);
+  const [image, setImage] = useState({});
 
   // fetch code from BlogData repo
   const fetchCode = async (path, isLocal) => {
     if (!isLocal) {
       const code = await getContentFromWeb(path, false);
       setCode(code);
-    } else {
-      const code = await getContentFromWeb(`/api/${branch}/${path}`, false);
-      setCode(code);
+      return;
     }
+    console.log("code path", `../../data/blog/${path}`);
+    const code = await import(`../../data/blog/${path}`);
+    setCode(await code.default);
+  };
+
+  const getImage = async () => {
+    if (props.value[1]) {
+      const localPath = await import(`../../data/blog/${props.value[0]}`);
+      setImage(localPath.default);
+      return;
+    }
+    setImage(props.value);
   };
 
   const copyToClipboard = () => {
@@ -45,15 +53,8 @@ export const BlogPart = (props) => {
 
   // if type is image, then fetch image & render
   if (type === "image") {
-    if (props.value[1]) {
-      const localPath = `/api/${branch}/${props.value[0]}`;
-      return (
-        <img className="blog-image" src={localPath} alt="Unable to load" />
-      );
-    }
-    return (
-      <img className="blog-image" src={props.value} alt="Unable to load" />
-    );
+    getImage();
+    return <img className="blog-image" src={image} alt="Unable to load" />;
   }
 
   // if type is code, then fetch code & place inside SyntaxHighlighter tag

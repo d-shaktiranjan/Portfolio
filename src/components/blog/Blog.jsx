@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-// utils & style imports
-import { getContentFromWeb } from "../../utils/blog";
+// style imports
 import "../../style/blog.css";
 
 // components imports
@@ -11,13 +10,14 @@ import { NoMatch } from "../NoMatch";
 import { BlogPart } from "./BlogPart";
 import { BlogLoading } from "./BlogLoading";
 
+import blogList from "../../data/blog/about.json";
+
 export const Blog = () => {
   const params = useParams();
 
   // state variables
-  const [blogContent, setBlogContent] = useState({ order: [] });
+  const [blogContent, setBlogContent] = useState({ blogContent: {} });
   const [blogData, setBlogData] = useState({});
-  const [waitComplete, setWaitComplete] = useState(false);
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
 
   // env variables
@@ -25,13 +25,11 @@ export const Blog = () => {
 
   //  fetch blog list from web
   const updateBlogList = async () => {
-    const list = await getContentFromWeb(`/api/${branch}/about.json`);
-    list.map((item) => {
+    blogList.map((item) => {
       if (item.slug === params.slug) {
         setBlogData(item);
       }
     });
-    setWaitComplete(true);
   };
 
   // update blog list before load the page
@@ -41,22 +39,27 @@ export const Blog = () => {
 
   // update blogContent after blogData fetched
   useEffect(() => {
-    // get blog content from gist link
     const getBlog = async () => {
-      const fileLink = `/api/${branch}/${blogData.filePath}/blog.json`;
-      const data = await getContentFromWeb(fileLink);
+      try {
+        const path = `../../data/blog/${blogData.filePath}/blog.json`;
+        const fileLink = await import(path);
+        const data = await fileLink.default;
 
-      // set 250ms delay to show react-skeleton-loading
-      setTimeout(() => {
-        setBlogContent(data);
+        // set 250ms delay to show react-skeleton-loading
+        setTimeout(() => {
+          setBlogContent(data);
+          setIsLoadingComplete(true);
+        }, 250);
+      } catch (error) {
         setIsLoadingComplete(true);
-      }, 250);
+      }
     };
+
     getBlog();
   }, [blogData, branch]);
 
   // if slug is invalid show NoMatch component
-  if (!blogData && waitComplete) {
+  if (!blogData) {
     return <NoMatch />;
   }
 
