@@ -34,6 +34,3 @@ And
 ```
 pnpm run dev
 ```
-
-#### LICENSE
-[Apache License](./LICENSE)
