@@ -1,17 +1,21 @@
 [
     {
+        "projectName": "Destructure (WIP)",
+        "isLocalImage": true,
+        "projectImage": "backstack.png",
+        "details": "A simple clean blog/article platform.",
+        "repoLink": "",
+        "liveLink": "",
+        "tools": ["NodeJS", "ExpressJS", "NextJS", "MongoDB"]
+    },
+    {
         "projectName": "E Note Book",
         "isLocalImage": true,
         "projectImage": "eNoteBook.png",
         "details": "A cloud based notebook storing app.",
         "repoLink": "https://github.com/d-shaktiranjan/E_Note_Book",
         "liveLink": "",
-        "tools": [
-            "Python",
-            "Django",
-            "SqLite3",
-            "Bootstrap"
-        ]
+        "tools": ["Python", "Django", "SqLite3", "Bootstrap"]
     },
     {
         "projectName": "File Share",
@@ -20,11 +24,7 @@
         "details": "Share files between devices that are connected to the same network.",
         "repoLink": "https://github.com/d-shaktiranjan/file_share",
         "liveLink": "",
-        "tools": [
-            "Python",
-            "Flask",
-            "HTML,CSS & JS"
-        ]
+        "tools": ["Python", "Flask", "HTML,CSS & JS"]
     },
     {
         "projectName": "Web Image Editor",
@@ -33,11 +33,7 @@
         "details": "An Open CV app, where you can add filter in an images.",
         "repoLink": "https://github.com/d-shaktiranjan/WebImageEditor",
         "liveLink": "",
-        "tools": [
-            "Python",
-            "Open CV",
-            "Flask"
-        ]
+        "tools": ["Python", "Open CV", "Flask"]
     },
     {
         "projectName": "Shortify Visit",
@@ -46,26 +42,7 @@
         "details": "Make link shorter.",
         "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
         "liveLink": "",
-        "tools": [
-            "Python",
-            "Flask",
-            "SqLite3",
-            "Bootstrap"
-        ]
-    },
-    {
-        "projectName": "Backstack (WIP)",
-        "isLocalImage": true,
-        "projectImage": "backstack.png",
-        "details": "A solution for frontend developers to store data from there users.",
-        "repoLink": "",
-        "liveLink": "",
-        "tools": [
-            "React",
-            "Express JS",
-            "Mongo DB",
-            "Node JS"
-        ]
+        "tools": ["Python", "Flask", "SqLite3", "Bootstrap"]
     },
     {
         "projectName": "Cart Public",
@@ -74,11 +51,6 @@
         "details": "An eCommerce cloth selling site.",
         "repoLink": "",
         "liveLink": "",
-        "tools": [
-            "Python",
-            "Django",
-            "SqLite3",
-            "HTML,CSS & JS"
-        ]
+        "tools": ["Python", "Django", "SqLite3", "HTML,CSS & JS"]
     }
 ]
