@@ -1,11 +1,17 @@
 import "./style/style.css";
 import "./style/responsive.css";
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 
 import {
-  Navbar, Footer, Home, SkillSection,
-  Projects, BlogHome, Blog, NoMatch
+  Navbar,
+  Footer,
+  Home,
+  SkillSection,
+  Projects,
+  BlogHome,
+  Blog,
+  NoMatch,
 } from "./components";
 
 const App = () => {

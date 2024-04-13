@@ -1,21 +1,21 @@
 .home-section {
-    /* justify-content: space-between; */
-    justify-content: center;
-    align-self: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-self: center;
 }
 
 .home {
-    font-size: 20px;
-    flex-direction: column;
-    align-items: flex-start;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .home-image {
-    width: fit-content;
+  width: fit-content;
 }
 
 .my-image {
-    width: 25rem;
-    border-radius: 300px;
-    text-align: center;
+  width: 25rem;
+  border-radius: 300px;
+  text-align: center;
 }

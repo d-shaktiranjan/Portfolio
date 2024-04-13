@@ -1,56 +1,56 @@
 [
-    {
-        "projectName": "Destructure (WIP)",
-        "isLocalImage": true,
-        "projectImage": "backstack.png",
-        "details": "A simple clean blog/article platform.",
-        "repoLink": "",
-        "liveLink": "",
-        "tools": ["NodeJS", "ExpressJS", "NextJS", "MongoDB"]
-    },
-    {
-        "projectName": "E Note Book",
-        "isLocalImage": true,
-        "projectImage": "eNoteBook.png",
-        "details": "A cloud based notebook storing app.",
-        "repoLink": "https://github.com/d-shaktiranjan/E_Note_Book",
-        "liveLink": "",
-        "tools": ["Python", "Django", "SqLite3", "Bootstrap"]
-    },
-    {
-        "projectName": "File Share",
-        "isLocalImage": true,
-        "projectImage": "fileShare.png",
-        "details": "Share files between devices that are connected to the same network.",
-        "repoLink": "https://github.com/d-shaktiranjan/file_share",
-        "liveLink": "",
-        "tools": ["Python", "Flask", "HTML,CSS & JS"]
-    },
-    {
-        "projectName": "Web Image Editor",
-        "isLocalImage": true,
-        "projectImage": "webImage.png",
-        "details": "An Open CV app, where you can add filter in an images.",
-        "repoLink": "https://github.com/d-shaktiranjan/WebImageEditor",
-        "liveLink": "",
-        "tools": ["Python", "Open CV", "Flask"]
-    },
-    {
-        "projectName": "Shortify Visit",
-        "isLocalImage": true,
-        "projectImage": "shortifyVisit.png",
-        "details": "Make link shorter.",
-        "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
-        "liveLink": "",
-        "tools": ["Python", "Flask", "SqLite3", "Bootstrap"]
-    },
-    {
-        "projectName": "Cart Public",
-        "isLocalImage": false,
-        "projectImage": "https://plus.unsplash.com/premium_photo-1664201890376-b735362539bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80",
-        "details": "An eCommerce cloth selling site.",
-        "repoLink": "",
-        "liveLink": "",
-        "tools": ["Python", "Django", "SqLite3", "HTML,CSS & JS"]
-    }
+  {
+    "projectName": "Destructure (WIP)",
+    "isLocalImage": true,
+    "projectImage": "backstack.png",
+    "details": "A simple clean blog/article platform.",
+    "repoLink": "",
+    "liveLink": "",
+    "tools": ["NodeJS", "ExpressJS", "NextJS", "MongoDB"]
+  },
+  {
+    "projectName": "E Note Book",
+    "isLocalImage": true,
+    "projectImage": "eNoteBook.png",
+    "details": "A cloud based notebook storing app.",
+    "repoLink": "https://github.com/d-shaktiranjan/E_Note_Book",
+    "liveLink": "",
+    "tools": ["Python", "Django", "SqLite3", "Bootstrap"]
+  },
+  {
+    "projectName": "File Share",
+    "isLocalImage": true,
+    "projectImage": "fileShare.png",
+    "details": "Share files between devices that are connected to the same network.",
+    "repoLink": "https://github.com/d-shaktiranjan/file_share",
+    "liveLink": "",
+    "tools": ["Python", "Flask", "HTML,CSS & JS"]
+  },
+  {
+    "projectName": "Web Image Editor",
+    "isLocalImage": true,
+    "projectImage": "webImage.png",
+    "details": "An Open CV app, where you can add filter in an images.",
+    "repoLink": "https://github.com/d-shaktiranjan/WebImageEditor",
+    "liveLink": "",
+    "tools": ["Python", "Open CV", "Flask"]
+  },
+  {
+    "projectName": "Shortify Visit",
+    "isLocalImage": true,
+    "projectImage": "shortifyVisit.png",
+    "details": "Make link shorter.",
+    "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
+    "liveLink": "",
+    "tools": ["Python", "Flask", "SqLite3", "Bootstrap"]
+  },
+  {
+    "projectName": "Cart Public",
+    "isLocalImage": false,
+    "projectImage": "https://plus.unsplash.com/premium_photo-1664201890376-b735362539bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80",
+    "details": "An eCommerce cloth selling site.",
+    "repoLink": "",
+    "liveLink": "",
+    "tools": ["Python", "Django", "SqLite3", "HTML,CSS & JS"]
+  }
 ]

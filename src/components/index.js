@@ -9,12 +9,12 @@ import { BlogHome } from "./blog/BlogHome";
 import { Blog } from "./blog/Blog";
 
 export {
-	Navbar,
-	Footer,
-	Home,
-	NoMatch,
-	SkillSection,
-	Projects,
-	BlogHome,
-	Blog,
+  Navbar,
+  Footer,
+  Home,
+  NoMatch,
+  SkillSection,
+  Projects,
+  BlogHome,
+  Blog,
 };
