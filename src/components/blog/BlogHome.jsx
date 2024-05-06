@@ -90,12 +90,8 @@ const NoInternet = () => {
 };
 
 export const BlogBadge = () => {
-  const redirectToUrl = () => {
-    console.log("hello hello");
-    window.open("https://destructure.in/", "_blank");
-  };
   return (
-    <div className="blog-badge" onClick={redirectToUrl}>
+    <div className="blog-badge">
       This blog section is no more maintained
       <p>
         Please visit{" "}
