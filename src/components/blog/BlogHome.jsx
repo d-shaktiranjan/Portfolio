@@ -28,6 +28,7 @@ export const BlogHome = () => {
 
   return (
     <div className="min-height blog-home">
+      <BlogBadge />
       {isWaitOver && blogList.length === 0 ? (
         <NoInternet />
       ) : (
@@ -84,6 +85,24 @@ const NoInternet = () => {
         <div>There's maybe some network issues on your side.</div>
         <div>Try changing your DNS settings or network.</div>
       </div>
+    </div>
+  );
+};
+
+export const BlogBadge = () => {
+  const redirectToUrl = () => {
+    console.log("hello hello");
+    window.open("https://destructure.in/", "_blank");
+  };
+  return (
+    <div className="blog-badge" onClick={redirectToUrl}>
+      This blog section is no more maintained
+      <p>
+        Please visit{" "}
+        <a href="https://destructure.in/" className="underline" target="_blank">
+          destructure.in
+        </a>
+      </p>
     </div>
   );
 };

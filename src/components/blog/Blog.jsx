@@ -10,6 +10,7 @@ import "../../style/blog.css";
 import { NoMatch } from "../NoMatch";
 import { BlogPart } from "./BlogPart";
 import { BlogLoading } from "./BlogLoading";
+import { BlogBadge } from "./BlogHome";
 
 export const Blog = () => {
   const params = useParams();
@@ -67,6 +68,7 @@ export const Blog = () => {
     : `Blog | Shakti Ranjan Debata`;
   return (
     <div className="container min-height blog-content">
+      <BlogBadge />
       {isLoadingComplete ? (
         <>
           <h1 className="accent underline">{blogContent.title}</h1>
