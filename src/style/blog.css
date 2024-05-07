@@ -1,11 +1,9 @@
 .blog-home {
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 0rem 10rem;
 }
 
 .blog-card {
-  margin: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
 }
@@ -76,10 +74,11 @@
   margin-left: 1rem;
 }
 
-.blog-badge{
+.blog-badge {
   position: sticky;
   top: 0;
   text-align: center;
   color: var(--little-black);
   background-color: var(--accent-color);
+  margin-bottom: 10px;
 }
