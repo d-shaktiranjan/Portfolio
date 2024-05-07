@@ -67,27 +67,29 @@ export const Blog = () => {
     ? `${blogContent.title} | Shakti Ranjan Debata`
     : `Blog | Shakti Ranjan Debata`;
   return (
-    <div className="container min-height blog-content">
+    <>
       <BlogBadge />
-      {isLoadingComplete ? (
-        <>
-          <h1 className="accent underline">{blogContent.title}</h1>
-          <div className="blog-card-left flex accent">
-            <span>
-              <i className="fa-solid fa-user"></i> {blogContent.authorName}
-            </span>
-            <span>
-              <i className="fa-solid fa-calendar-days"></i>{" "}
-              {blogContent.releaseData}
-            </span>
-          </div>
-          {Object.keys(blogContent.blogContent).map((item) => (
-            <BlogPart itemName={item} value={blogContent.blogContent[item]} />
-          ))}
-        </>
-      ) : (
-        <BlogLoading />
-      )}
-    </div>
+      <div className="container min-height blog-content">
+        {isLoadingComplete ? (
+          <>
+            <h1 className="accent underline">{blogContent.title}</h1>
+            <div className="blog-card-left flex accent">
+              <span>
+                <i className="fa-solid fa-user"></i> {blogContent.authorName}
+              </span>
+              <span>
+                <i className="fa-solid fa-calendar-days"></i>{" "}
+                {blogContent.releaseData}
+              </span>
+            </div>
+            {Object.keys(blogContent.blogContent).map((item) => (
+              <BlogPart itemName={item} value={blogContent.blogContent[item]} />
+            ))}
+          </>
+        ) : (
+          <BlogLoading />
+        )}
+      </div>
+    </>
   );
 };

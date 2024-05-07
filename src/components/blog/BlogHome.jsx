@@ -32,7 +32,7 @@ export const BlogHome = () => {
       {isWaitOver && blogList.length === 0 ? (
         <NoInternet />
       ) : (
-        <div>
+        <div style={{ width: "65%", marginInline: "auto" }}>
           {blogList.map((item, index) => (
             <BlogCard info={item} key={index} />
           ))}
