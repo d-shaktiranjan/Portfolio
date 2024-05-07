@@ -76,7 +76,7 @@
 
 .blog-badge {
   position: sticky;
-  top: 0;
+  top: var(--nav-height);
   text-align: center;
   color: var(--little-black);
   background-color: var(--accent-color);
