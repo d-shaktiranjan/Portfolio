@@ -27,18 +27,20 @@ export const BlogHome = () => {
   }, []);
 
   return (
-    <div className="min-height blog-home">
+    <>
       <BlogBadge />
-      {isWaitOver && blogList.length === 0 ? (
-        <NoInternet />
-      ) : (
-        <div style={{ width: "65%", marginInline: "auto" }}>
-          {blogList.map((item, index) => (
-            <BlogCard info={item} key={index} />
-          ))}
-        </div>
-      )}
-    </div>
+      <div className="min-height blog-home">
+        {isWaitOver && blogList.length === 0 ? (
+          <NoInternet />
+        ) : (
+          <div style={{ maxWidth: "65rem", marginInline: "auto" }}>
+            {blogList.map((item, index) => (
+              <BlogCard info={item} key={index} />
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

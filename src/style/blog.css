@@ -23,7 +23,7 @@
 }
 
 .blog-content {
-  width: 65%;
+  max-width: 65rem;
   margin-bottom: 1rem;
 }
 
