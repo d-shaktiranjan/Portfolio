@@ -1,15 +1,9 @@
 import "../style/home.css";
 import { Link } from "react-router-dom";
 import myImage from "../static/me.png";
+import work from "../data/work.json";
 
 export const Home = () => {
-  // env variables
-  const showCompanySection =
-    import.meta.env.VITE_SHOW_COMPANY_SECTION === "true" ? true : false;
-  const companyName = import.meta.env.VITE_COMPANY_NAME;
-  const companyUrl = import.meta.env.VITE_COMPANY_URL;
-  const roleInCompany = import.meta.env.VITE_COMPANY_ROLE;
-
   return (
     <div className="flex container min-height home-section">
       <title>Shakti Ranjan Debata | Backend Developer</title>
@@ -21,13 +15,13 @@ export const Home = () => {
           I'm a Computer Science Engineering student passout from CV Raman
           Global University.
         </span>
-        {showCompanySection && (
+        {work.showCompanySection && (
           <span>
             Currently working in{" "}
-            <a href={companyUrl} target="__blank" className="accent">
-              {companyName}{" "}
+            <a href={work.companyUrl} target="__blank" className="accent">
+              {work.companyName}{" "}
             </a>
-            as a {roleInCompany}.
+            as a {work.roleInCompany}.
           </span>
         )}
         <Link to="/skills" className="primary-btn block accent">
