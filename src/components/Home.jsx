@@ -10,9 +10,9 @@ export const Home = () => {
   const companyUrl = import.meta.env.VITE_COMPANY_URL;
   const roleInCompany = import.meta.env.VITE_COMPANY_ROLE;
 
-  document.title = "Shakti | Backend Developer";
   return (
     <div className="flex container min-height home-section">
+      <title>Shakti Ranjan Debata | Backend Developer</title>
       <div className="flex home">
         Hey, This is
         <span className="main-heading block accent">Shakti Ranjan Debata.</span>

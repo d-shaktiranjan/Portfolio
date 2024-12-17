@@ -62,11 +62,13 @@ export const Blog = () => {
     return <NoMatch />;
   }
 
-  document.title = isLoadingComplete
-    ? `${blogContent.title} | Shakti Ranjan Debata`
-    : `Blog | Shakti Ranjan Debata`;
   return (
     <div className="container min-height blog-content">
+      <title>
+        {isLoadingComplete
+          ? `${blogContent.title} | Shakti Ranjan Debata`
+          : `Blog | Shakti Ranjan Debata`}
+      </title>
       {isLoadingComplete ? (
         <>
           <h1 className="accent underline">{blogContent.title}</h1>

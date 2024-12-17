@@ -28,6 +28,7 @@ export const BlogHome = () => {
 
   return (
     <div className="min-height blog-home">
+      <title>Blogs | Shakti Ranjan Debata</title>
       {isWaitOver && blogList.length === 0 ? (
         <NoInternet />
       ) : (
@@ -44,7 +45,6 @@ export const BlogHome = () => {
 /*  BlogCard sub component, it render Blog title, about, author, date & readmore button,
     And whole card is clickable. */
 const BlogCard = (props) => {
-  document.title = "Blogs | Shakti Ranjan Debata";
   const info = props.info;
   return (
     <div className="blog-card">
