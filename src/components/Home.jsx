@@ -1,6 +1,5 @@
 import "../style/home.css";
 import { Link } from "react-router-dom";
-import myImage from "../static/me.png";
 import work from "../data/work.json";
 
 export const Home = () => {
@@ -29,7 +28,7 @@ export const Home = () => {
         </Link>
       </div>
       <div className="home-image">
-        <img src={myImage} className="my-image" alt="" />
+        <img src="/static/me.png" className="my-image" alt="" />
       </div>
     </div>
   );

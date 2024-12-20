@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getContentFromWeb } from "../../utils/blog";
 import "../../style/blog.css";
-import noInternetIcon from "../../static/no-internet.png";
 
 export const BlogHome = () => {
   const [blogList, setBlogList] = useState([]);
@@ -75,7 +74,7 @@ const NoInternet = () => {
   return (
     <div className="no-internet flex">
       <img
-        src={noInternetIcon}
+        src="/static/no-internet.svg"
         className="no-internet-image"
         alt="No Internet"
       />

@@ -3,9 +3,7 @@ import "../../style/project.css";
 export const ProjectCard = (props) => {
   const projectInfo = props.projectInfo;
   const tools = projectInfo.tools;
-  const projectImage = projectInfo.isLocalImage
-    ? `src/static/projectImages/${projectInfo.projectImage.split(".")[0]}.png`
-    : projectInfo.projectImage;
+  const projectImage = `/static/projectImages/${projectInfo.projectImage.split(".")[0]}.png`;
 
   return (
     <div className="container flex project-card">
