@@ -1,29 +1,11 @@
 [
   {
-    "projectName": "Feebac",
-    "isLocalImage": true,
-    "projectImage": "backstack.png",
-    "details": "A social media cum survey conduct app with loyalty program & user profiling.",
-    "repoLink": "",
-    "liveLink": "https://api.feebac.com/",
-    "tools": ["Python", "Django", "DRF", "MySQL"]
-  },
-  {
-    "projectName": "Monest",
-    "isLocalImage": true,
-    "projectImage": "backstack.png",
-    "details": "A property management application build for client.",
-    "repoLink": "",
-    "liveLink": "https://api.monest.com/",
-    "tools": ["NodeJS", "ExpressJS", "MongoDB"]
-  },
-  {
-    "projectName": "Destructure",
+    "projectName": "Destructure (WIP)",
     "isLocalImage": true,
     "projectImage": "backstack.png",
     "details": "A simple clean blog/article platform.",
-    "repoLink": "https://github.com/d-shaktiranjan/destructure-backend",
-    "liveLink": "https://destructure.in/",
+    "repoLink": "",
+    "liveLink": "",
     "tools": ["NodeJS", "ExpressJS", "NextJS", "MongoDB"]
   },
   {
@@ -61,5 +43,14 @@
     "repoLink": "https://github.com/d-shaktiranjan/ShortifyVisit",
     "liveLink": "",
     "tools": ["Python", "Flask", "SqLite3", "Bootstrap"]
+  },
+  {
+    "projectName": "Cart Public",
+    "isLocalImage": false,
+    "projectImage": "https://plus.unsplash.com/premium_photo-1664201890376-b735362539bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80",
+    "details": "An eCommerce cloth selling site.",
+    "repoLink": "",
+    "liveLink": "",
+    "tools": ["Python", "Django", "SqLite3", "HTML,CSS & JS"]
   }
 ]
