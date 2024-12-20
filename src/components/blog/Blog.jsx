@@ -10,6 +10,7 @@ import "../../style/blog.css";
 import { NoMatch } from "../NoMatch";
 import { BlogPart } from "./BlogPart";
 import { BlogLoading } from "./BlogLoading";
+import { BlogBadge } from "./BlogHome";
 
 export const Blog = () => {
   const params = useParams();
@@ -63,31 +64,34 @@ export const Blog = () => {
   }
 
   return (
-    <div className="container min-height blog-content">
-      <title>
-        {isLoadingComplete
-          ? `${blogContent.title} | Shakti Ranjan Debata`
-          : `Blog | Shakti Ranjan Debata`}
-      </title>
-      {isLoadingComplete ? (
-        <>
-          <h1 className="accent underline">{blogContent.title}</h1>
-          <div className="blog-card-left flex accent">
-            <span>
-              <i className="fa-solid fa-user"></i> {blogContent.authorName}
-            </span>
-            <span>
-              <i className="fa-solid fa-calendar-days"></i>{" "}
-              {blogContent.releaseData}
-            </span>
-          </div>
-          {Object.keys(blogContent.blogContent).map((item) => (
-            <BlogPart itemName={item} value={blogContent.blogContent[item]} />
-          ))}
-        </>
-      ) : (
-        <BlogLoading />
-      )}
-    </div>
+    <>
+      <BlogBadge />
+      <div className="container min-height blog-content">
+        <title>
+          {isLoadingComplete
+            ? `${blogContent.title} | Shakti Ranjan Debata`
+            : `Blog | Shakti Ranjan Debata`}
+        </title>
+        {isLoadingComplete ? (
+          <>
+            <h1 className="accent underline">{blogContent.title}</h1>
+            <div className="blog-card-left flex accent">
+              <span>
+                <i className="fa-solid fa-user"></i> {blogContent.authorName}
+              </span>
+              <span>
+                <i className="fa-solid fa-calendar-days"></i>{" "}
+                {blogContent.releaseData}
+              </span>
+            </div>
+            {Object.keys(blogContent.blogContent).map((item) => (
+              <BlogPart itemName={item} value={blogContent.blogContent[item]} />
+            ))}
+          </>
+        ) : (
+          <BlogLoading />
+        )}
+      </div>
+    </>
   );
 };
