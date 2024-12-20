@@ -1,33 +1,11 @@
-import { useState, useEffect } from "react";
-
-// image & style imports
-import defaultProjectImage from "../../static/projectImages/default.png";
-import transparentImage from "../../static/projectImages/transparent.png";
 import "../../style/project.css";
 
 export const ProjectCard = (props) => {
   const projectInfo = props.projectInfo;
   const tools = projectInfo.tools;
-
-  const [projectImage, setProjectImage] = useState(transparentImage);
-
-  // get image path & set in state variables
-  const getProjectImage = async () => {
-    if (projectInfo.isLocalImage) {
-      const fileName = projectInfo.projectImage.split(".")[0];
-      const imagePromise = await import(
-        `../../static/projectImages/${fileName}.png`
-      );
-      const localImage = imagePromise.default;
-      if (localImage == undefined) setProjectImage(defaultProjectImage);
-      else setProjectImage(imagePromise.default);
-    } else setProjectImage(projectInfo.projectImage);
-  };
-
-  // get project image & set, before page loading
-  useEffect(() => {
-    getProjectImage();
-  }, []);
+  const projectImage = projectInfo.isLocalImage
+    ? `src/static/projectImages/${projectInfo.projectImage.split(".")[0]}.png`
+    : projectInfo.projectImage;
 
   return (
     <div className="container flex project-card">

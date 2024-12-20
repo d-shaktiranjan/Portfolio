@@ -1,7 +1,11 @@
 const Skill = (props) => {
   return (
     <div className="flex skill">
-      <img className="skill-img" src={`${`/src/static/icons/${props.title.toLowerCase()}.svg`}`} alt={props.title} />
+      <img
+        className="skill-img"
+        src={`${`/src/static/icons/${props.title.toLowerCase()}.svg`}`}
+        alt={props.title}
+      />
       <div>{props.title}</div>
     </div>
   );
