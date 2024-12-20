@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getContentFromWeb } from "../../utils/blog";
 import "../../style/blog.css";
-import noInternetIcon from "../../static/no-internet.png";
 
 export const BlogHome = () => {
   const [blogList, setBlogList] = useState([]);
@@ -28,6 +27,7 @@ export const BlogHome = () => {
 
   return (
     <div className="min-height blog-home">
+      <title>Blogs | Shakti Ranjan Debata</title>
       {isWaitOver && blogList.length === 0 ? (
         <NoInternet />
       ) : (
@@ -44,7 +44,6 @@ export const BlogHome = () => {
 /*  BlogCard sub component, it render Blog title, about, author, date & readmore button,
     And whole card is clickable. */
 const BlogCard = (props) => {
-  document.title = "Blogs | Shakti Ranjan Debata";
   const info = props.info;
   return (
     <div className="blog-card">
@@ -75,7 +74,7 @@ const NoInternet = () => {
   return (
     <div className="no-internet flex">
       <img
-        src={noInternetIcon}
+        src="/static/no-internet.svg"
         className="no-internet-image"
         alt="No Internet"
       />

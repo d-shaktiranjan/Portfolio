@@ -1,18 +1,11 @@
 import "../style/home.css";
 import { Link } from "react-router-dom";
-import myImage from "../static/me.png";
+import work from "../data/work.json";
 
 export const Home = () => {
-  // env variables
-  const showCompanySection =
-    import.meta.env.VITE_SHOW_COMPANY_SECTION === "true" ? true : false;
-  const companyName = import.meta.env.VITE_COMPANY_NAME;
-  const companyUrl = import.meta.env.VITE_COMPANY_URL;
-  const roleInCompany = import.meta.env.VITE_COMPANY_ROLE;
-
-  document.title = "Shakti | Backend Developer";
   return (
     <div className="flex container min-height home-section">
+      <title>Shakti Ranjan Debata | Backend Developer</title>
       <div className="flex home">
         Hey, This is
         <span className="main-heading block accent">Shakti Ranjan Debata.</span>
@@ -21,13 +14,13 @@ export const Home = () => {
           I'm a Computer Science Engineering student passout from CV Raman
           Global University.
         </span>
-        {showCompanySection && (
+        {work.showCompanySection && (
           <span>
             Currently working in{" "}
-            <a href={companyUrl} target="__blank" className="accent">
-              {companyName}{" "}
+            <a href={work.companyUrl} target="__blank" className="accent">
+              {work.companyName}{" "}
             </a>
-            as a {roleInCompany}.
+            as a {work.roleInCompany}.
           </span>
         )}
         <Link to="/skills" className="primary-btn block accent">
@@ -35,7 +28,7 @@ export const Home = () => {
         </Link>
       </div>
       <div className="home-image">
-        <img src={myImage} className="my-image" alt="" />
+        <img src="/static/me.png" className="my-image" alt="" />
       </div>
     </div>
   );
