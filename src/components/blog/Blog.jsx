@@ -63,8 +63,18 @@ export const Blog = () => {
     return <NoMatch />;
   }
 
+  const description = blogContent.title + "-" + blogContent.description;
+
   return (
     <>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={blogContent.title} />
+      <meta property="og:description" content={description} />
+      <title>
+        {isLoadingComplete
+          ? `${blogContent.title} | Shakti Ranjan Debata`
+          : `Blog | Shakti Ranjan Debata`}
+      </title>
       <BlogBadge />
       <div className="container min-height blog-content">
         <title>
