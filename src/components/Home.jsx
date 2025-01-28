@@ -11,8 +11,8 @@ export const Home = () => {
         <span className="main-heading block accent">Shakti Ranjan Debata.</span>
         <span className="main-heading block">I build Backend things.</span>
         <span>
-          I'm a Computer Science Engineering student passout from CV Raman
-          Global University.
+          I'm a Computer Science Engineering graduate from CV Raman Global
+          University.
         </span>
         {work.showCompanySection && (
           <span>
