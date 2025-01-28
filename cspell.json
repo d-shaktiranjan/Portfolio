@@ -1,0 +1,18 @@
+{
+  "words": [
+    "backstack",
+    "Debata",
+    "Raman",
+    "Ranjan",
+    "Shakti",
+    "Shortify"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "pnpm-lock.yaml",
+    "eslint.config.mjs",
+    "*svg",
+    "public/*.html"
+  ]
+}
