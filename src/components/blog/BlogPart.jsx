@@ -32,7 +32,7 @@ export const BlogPart = (props) => {
     setTimeout(() => setIsShowCheck(false), 4000);
   };
 
-  // checking item type & render components accoordingly
+  // checking item type & render components accordingly
   const type = props.itemName.split("-")[0];
   // if type is text render in div
   if (type === "text") {
