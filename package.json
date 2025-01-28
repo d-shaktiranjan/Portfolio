@@ -25,5 +25,5 @@
     "prettier": "^3.4.2",
     "vite": "^6.0.9"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.4"
 }
