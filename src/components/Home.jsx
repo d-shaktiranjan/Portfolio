@@ -8,7 +8,7 @@ export const Home = () => {
       <title>Shakti Ranjan Debata | Backend Developer</title>
       <div className="flex home">
         Hey, This is
-        <span className="main-heading block accent">Shakti Ranjan Debata.</span>
+        <h1 className="main-heading block accent">Shakti Ranjan Debata.</h1>
         <span className="main-heading block">I build Backend things.</span>
         <span>
           I'm a Computer Science Engineering graduate from CV Raman Global

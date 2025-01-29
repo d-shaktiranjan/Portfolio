@@ -27,7 +27,13 @@ export const BlogHome = () => {
 
   return (
     <div className="min-height blog-home">
+      {/* seo tags */}
       <title>Blogs | Shakti Ranjan Debata</title>
+      <meta
+        name="description"
+        content="Read my blog for insights on backend development, coding tutorials, and best practices in programming and system design."
+      />
+
       {isWaitOver && blogList.length === 0 ? (
         <NoInternet />
       ) : (

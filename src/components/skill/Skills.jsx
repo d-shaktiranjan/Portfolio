@@ -14,6 +14,12 @@ const Skill = (props) => {
 export const Skills = (props) => {
   return (
     <div>
+      {/* seo tag */}
+      <meta
+        name="description"
+        content="Explore the backend development skills of Shakti Ranjan Debata, including programming languages, database management, API design, and system architecture."
+      />
+
       <h1 className="sub-heading underline accent">{props.heading}</h1>
       <div className="grid skills">
         {props.list.map((item, index) => (
