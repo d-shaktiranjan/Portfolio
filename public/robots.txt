@@ -1,0 +1,6 @@
+# Allow all user agents (search engines) to crawl the entire site
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://shakti.destructure.in/sitemap.xml
