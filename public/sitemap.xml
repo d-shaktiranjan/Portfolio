@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- cSpell:disable -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://shakti.destructure.in/</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Skills Page -->
+  <url>
+    <loc>https://shakti.destructure.in/skills</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Projects Page -->
+  <url>
+    <loc>https://shakti.destructure.in/projects</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://shakti.destructure.in/blog</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
