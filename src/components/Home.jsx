@@ -24,8 +24,9 @@ export const Home = () => {
             as a {work.roleInCompany}.
           </span>
         )}
-        <Link to="/skills" className="primary-btn block accent">
-          Explore Skills <ArrowRight size={20} />
+        <Link to="/skills" className="primary-btn block accent icon-provider">
+          <span>Explore Skills</span>
+          <ArrowRight size={20} />
         </Link>
       </div>
       <div className="home-image">
