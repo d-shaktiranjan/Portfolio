@@ -25,7 +25,7 @@ export const Home = () => {
           </span>
         )}
         <Link to="/skills" className="primary-btn block accent">
-          Explore Skills <ArrowRight />
+          Explore Skills <ArrowRight size={20} />
         </Link>
       </div>
       <div className="home-image">

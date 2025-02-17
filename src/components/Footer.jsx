@@ -10,7 +10,12 @@ import {
 const SocialLink = ({ Component, name, link }) => {
   return (
     <span>
-      <a target="_blank" rel="noopener noreferrer" href={link}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icon-provider"
+        href={link}
+      >
         <Component size={20} weight="bold" />{" "}
         <span className="footer-text">{name}</span>
       </a>
