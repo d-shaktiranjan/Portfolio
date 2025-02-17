@@ -1,6 +1,7 @@
 import "../style/home.css";
 import { Link } from "react-router-dom";
 import work from "../data/work.json";
+import { ArrowRight } from "@phosphor-icons/react";
 
 export const Home = () => {
   return (
@@ -23,8 +24,9 @@ export const Home = () => {
             as a {work.roleInCompany}.
           </span>
         )}
-        <Link to="/skills" className="primary-btn block accent">
-          Explore Skills <i className="fa-solid fa-arrow-right"></i>
+        <Link to="/skills" className="primary-btn block accent icon-provider">
+          <span>Explore Skills</span>
+          <ArrowRight size={20} />
         </Link>
       </div>
       <div className="home-image">

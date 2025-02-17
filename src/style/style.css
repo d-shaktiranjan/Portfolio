@@ -123,6 +123,11 @@ nav ul li {
   margin-right: 1rem;
 }
 
+.icon-provider {
+  display: flex;
+  gap: 0.1rem;
+}
+
 /* Scroll bar style */
 ::-webkit-scrollbar {
   width: 5px;
