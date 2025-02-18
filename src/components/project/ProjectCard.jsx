@@ -1,4 +1,5 @@
 import "../../style/project.css";
+import { GithubLogo, Link } from "@phosphor-icons/react";
 
 export const ProjectCard = (props) => {
   const projectInfo = props.projectInfo;
@@ -17,15 +18,16 @@ export const ProjectCard = (props) => {
       </h3>
       <div className="project-tech">{tools.join(" | ")}</div>
       <div className="project-details">{projectInfo.details}</div>
-      <div>
+      <div className="card-link-container">
         {projectInfo.repoLink && (
           <span className="card-link">
             <a
               href={projectInfo.repoLink}
               target="_blank"
               rel="noopener noreferrer"
+              className="icon-provider"
             >
-              <i className="fa-brands fa-github"></i> GitHub
+              <GithubLogo size={20} /> GitHub
             </a>
           </span>
         )}
@@ -35,8 +37,9 @@ export const ProjectCard = (props) => {
               href={projectInfo.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              className="icon-provider"
             >
-              <i className="fa-solid fa-link"></i> Live Link
+              <Link size={20} /> Live Link
             </a>
           </span>
         )}

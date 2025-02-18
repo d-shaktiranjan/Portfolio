@@ -34,7 +34,11 @@ export const Footer = () => {
           name="Linkedin"
           link={about.linkedin}
         />
-        <SocialLink Component={Envelope} name="Email" link={about.email} />
+        <SocialLink
+          Component={Envelope}
+          name="Email"
+          link={`mailto:${about.email}`}
+        />
         <SocialLink
           Component={InstagramLogo}
           name="Instagram"

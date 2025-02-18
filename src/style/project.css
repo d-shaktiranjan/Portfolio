@@ -44,3 +44,7 @@
 .card-link:hover {
   color: var(--accent-color);
 }
+
+.card-link-container {
+  display: flex;
+}
