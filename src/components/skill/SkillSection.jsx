@@ -6,10 +6,10 @@ export const SkillSection = () => {
   return (
     <div className="flex skill-section min-height">
       <title>Skills | Shakti Ranjan Debata</title>
-      <Skills list={skills.languageList} heading="Languages" />
-      <Skills list={skills.frameworkLibList} heading="Framework & libs." />
-      <Skills list={skills.techTools} heading="Tech Tools" />
-      <Skills list={skills.learningTech} heading="Learning" />
+
+      {Object.entries(skills).map(([heading, values]) => (
+        <Skills key={heading} list={values} heading={heading} />
+      ))}
     </div>
   );
 };

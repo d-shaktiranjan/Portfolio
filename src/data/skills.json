@@ -1,5 +1,5 @@
 {
-  "languageList": [
+  "Languages": [
     "Java",
     "Python",
     "Java Script",
@@ -7,7 +7,7 @@
     "PHP",
     "HTML & CSS"
   ],
-  "frameworkLibList": [
+  "Framework & libs.": [
     "React",
     "Express JS",
     "Django",
@@ -15,13 +15,6 @@
     "Bootstrap",
     "Tailwind"
   ],
-  "techTools": ["Linux", "Git", "Docker", "Mongo DB"],
-  "learningTech": [
-    "React Native",
-    "Typescript",
-    "NEXT.js",
-    "FastAPI",
-    "DSA",
-    "DRF"
-  ]
+  "Tech Tools": ["Linux", "Git", "Docker", "Mongo DB"],
+  "Learning": ["React Native", "Typescript", "NEXT.js", "FastAPI", "DSA", "DRF"]
 }
