@@ -7,6 +7,7 @@
 .skill {
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .skills {
@@ -14,8 +15,40 @@
   gap: 25px;
 }
 
+.skill-container,
+.skill-section,
+.skill-box {
+  display: grid;
+}
+
+.skill-container {
+  place-items: center;
+  padding: 5rem;
+}
+
 .skill-section {
-  justify-content: space-evenly;
-  align-items: baseline;
-  padding-top: 10%;
+  grid-template-columns: repeat(3, 1fr);
+  margin-inline: auto;
+  gap: 3rem;
+}
+
+.skill-box {
+  grid-template-rows: 60px 1fr;
+  gap: 1rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .skill-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
