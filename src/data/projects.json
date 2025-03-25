@@ -1,5 +1,14 @@
 [
   {
+    "projectName": "Lorin",
+    "isLocalImage": true,
+    "projectImage": "lorin.png",
+    "details": "Express middleware for colorful API logging with file.",
+    "repoLink": "https://github.com/d-shaktiranjan/lorin",
+    "liveLink": "https://www.npmjs.com/package/lorin",
+    "tools": ["Node JS", "Typescript", "Logger", "ExpressJS"]
+  },
+  {
     "projectName": "Destructure (WIP)",
     "isLocalImage": true,
     "projectImage": "backstack.png",
