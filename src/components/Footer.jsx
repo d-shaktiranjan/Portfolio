@@ -5,6 +5,7 @@ import {
   GithubLogo,
   LinkedinLogo,
   Envelope,
+  XLogo,
 } from "@phosphor-icons/react";
 
 const SocialLink = ({ Component, name, link }) => {
@@ -38,6 +39,11 @@ export const Footer = () => {
           Component={Envelope}
           name="Email"
           link={`mailto:${about.email}`}
+        />
+        <SocialLink
+          Component={XLogo}
+          name="X"
+          link="https://x.com/d_shaktiranjan"
         />
         <SocialLink
           Component={InstagramLogo}
