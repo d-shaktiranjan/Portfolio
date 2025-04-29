@@ -40,11 +40,7 @@ export const Footer = () => {
           name="Email"
           link={`mailto:${about.email}`}
         />
-        <SocialLink
-          Component={XLogo}
-          name="X"
-          link="https://x.com/d_shaktiranjan"
-        />
+        <SocialLink Component={XLogo} name="X.com" link={about.x} />
         <SocialLink
           Component={InstagramLogo}
           name="Instagram"
