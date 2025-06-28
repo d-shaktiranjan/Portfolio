@@ -12,23 +12,23 @@
     "spell": "cspell lint ."
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.7",
+    "@phosphor-icons/react": "^2.1.10",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-loading-skeleton": "^3.5.0",
-    "react-router-dom": "^7.5.0",
+    "react-router-dom": "^7.6.3",
     "react-syntax-highlighter": "^15.6.1"
   },
   "devDependencies": {
     "@swc/helpers": "^0.5.17",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react-swc": "^3.9.0",
-    "cspell": "^8.18.1",
-    "prettier": "^3.5.3",
-    "vite": "^6.3.0"
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.10.2",
+    "cspell": "^9.1.2",
+    "prettier": "^3.6.2",
+    "vite": "^7.0.0"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.12.4",
   "pnpm": {
     "ignoredBuiltDependencies": [
       "@swc/core",
