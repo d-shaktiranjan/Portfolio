@@ -1,7 +1,7 @@
 import "../style/home.css";
 import { Link } from "react-router-dom";
 import work from "../data/work.json";
-import { ArrowRight, ReadCvLogoIcon } from "@phosphor-icons/react";
+import { ArrowRight, FileTextIcon } from "@phosphor-icons/react";
 
 export const Home = () => {
   return (
@@ -33,7 +33,7 @@ export const Home = () => {
             target="_blank"
           >
             <span>Resume</span>
-            <ReadCvLogoIcon size={20} />
+            <FileTextIcon size={20} />
           </a>
           <Link to="/skills" className="primary-btn block accent icon-provider">
             <span>Explore Skills</span>
