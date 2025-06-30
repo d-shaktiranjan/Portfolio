@@ -19,3 +19,7 @@
   border-radius: 300px;
   text-align: center;
 }
+
+.home-section-buttons {
+  gap: 1rem;
+}
