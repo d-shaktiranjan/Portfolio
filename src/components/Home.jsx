@@ -7,6 +7,7 @@ export const Home = () => {
   return (
     <div className="flex container min-height home-section">
       <title>Shakti Ranjan Debata | Backend Developer</title>
+
       <div className="flex home">
         Hey, This is
         <h1 className="main-heading block accent">Shakti Ranjan Debata.</h1>
@@ -24,6 +25,7 @@ export const Home = () => {
             as a {work.roleInCompany}.
           </span>
         )}
+        {/* home button sections */}
         <div className="home-section-buttons flex">
           <a
             href="/resume.pdf"
