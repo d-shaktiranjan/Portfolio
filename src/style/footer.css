@@ -7,7 +7,7 @@ footer {
 .social-links {
   justify-content: space-evenly;
   transition: 0.7s ease;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .social-links span :hover {
