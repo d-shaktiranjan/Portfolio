@@ -17,8 +17,7 @@ const SocialLink = ({ Component, name, link }) => {
         className="icon-provider"
         href={link}
       >
-        <Component size={20} weight="bold" />{" "}
-        <span className="footer-text">{name}</span>
+        <Component size={20} weight="bold" alt={name} />{" "}
       </a>
     </span>
   );
