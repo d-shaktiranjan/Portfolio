@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier ./src --write",
-    "format.check": "prettier ./src --check",
+    "format": "prettier ./ --write",
+    "format.check": "prettier ./ --check",
     "spell": "cspell lint ."
   },
   "dependencies": {
