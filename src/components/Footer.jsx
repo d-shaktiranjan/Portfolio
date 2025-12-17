@@ -1,39 +1,50 @@
 import "../style/footer.css";
 import about from "../data/about.json";
+import {
+  InstagramLogo,
+  GithubLogo,
+  LinkedinLogo,
+  Envelope,
+  XLogo,
+} from "@phosphor-icons/react";
+
+const SocialLink = ({ Component, name, link }) => {
+  return (
+    <span>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icon-provider"
+        href={link}
+      >
+        <Component size={20} weight="bold" alt={name} />{" "}
+      </a>
+    </span>
+  );
+};
 
 export const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="flex">
       <div className="flex social-links">
-        <span>
-          <a target="_blank" rel="noopener noreferrer" href={about.github}>
-            <i className="fa-brands fa-github"></i>{" "}
-            <span className="footer-text">GitHub</span>
-          </a>
-        </span>
-        <span>
-          <a target="_blank" rel="noopener noreferrer" href={about.linkedin}>
-            <i className="fa-brands fa-linkedin"></i>{" "}
-            <span className="footer-text">LinkedIn</span>
-          </a>
-        </span>
-        <span>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={`mailto:${about.email}`}
-          >
-            <i className="fa-regular fa-envelope"></i>{" "}
-            <span className="footer-text">Email</span>
-          </a>
-        </span>
-        <span>
-          <a target="_blank" rel="noopener noreferrer" href={about.instagram}>
-            <i className="fa-brands fa-instagram"></i>{" "}
-            <span className="footer-text">Instagram</span>
-          </a>
-        </span>
+        <SocialLink Component={GithubLogo} name="GitHub" link={about.github} />
+        <SocialLink
+          Component={LinkedinLogo}
+          name="Linkedin"
+          link={about.linkedin}
+        />
+        <SocialLink
+          Component={Envelope}
+          name="Email"
+          link={`mailto:${about.email}`}
+        />
+        <SocialLink Component={XLogo} name="X.com" link={about.x} />
+        <SocialLink
+          Component={InstagramLogo}
+          name="Instagram"
+          link={about.instagram}
+        />
       </div>
       <div className="copy-right">
         <span className="footer-text" id="copyText">

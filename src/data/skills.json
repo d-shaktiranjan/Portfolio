@@ -1,27 +1,7 @@
 {
-  "languageList": [
-    "Java",
-    "Python",
-    "Java Script",
-    "Node JS",
-    "PHP",
-    "HTML & CSS"
-  ],
-  "frameworkLibList": [
-    "React",
-    "Express JS",
-    "Django",
-    "Flask",
-    "Bootstrap",
-    "Tailwind"
-  ],
-  "techTools": ["Linux", "Git", "Docker", "Mongo DB"],
-  "learningTech": [
-    "React Native",
-    "Typescript",
-    "NEXT.js",
-    "FastAPI",
-    "DSA",
-    "DRF"
-  ]
+  "Backend Technologies": ["Node JS", "Express JS", "Django", "DRF", "Flask"],
+  "Databases": ["MySQL", "MongoDB", "MariaDB", "Redis"],
+  "Languages": ["Java", "Python", "Javascript", "Typescript"],
+  "DevOps & Tools": ["Linux", "Git", "Docker", "Nginx", "GitHub"],
+  "Frontend (Basic)": ["HTML", "CSS", "React", "Tailwind", "Bootstrap"]
 }

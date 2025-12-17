@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getContentFromWeb } from "../../utils/blog";
 import "../../style/blog.css";
+import { CalendarDots, User, BookOpen } from "@phosphor-icons/react";
 
 export const BlogHome = () => {
   const [blogList, setBlogList] = useState([]);
@@ -28,6 +29,10 @@ export const BlogHome = () => {
   return (
     <>
       <title>Blogs | Shakti Ranjan Debata</title>
+      <meta
+        name="description"
+        content="Read my blog for insights on backend development, coding tutorials, and best practices in programming and system design."
+      />
       <BlogBadge />
       <div className="min-height blog-home">
         {isWaitOver && blogList.length === 0 ? (
@@ -55,16 +60,16 @@ const BlogCard = (props) => {
         <p>{info.about}</p>
         <div className="flex blog-card-footer accent">
           <div className="blog-card-left flex">
-            <div>
-              <i className="fa-solid fa-user accent"></i> {info.author}
+            <div className="icon-provider">
+              <User size={20} weight="fill" /> {info.author}
             </div>
-            <div>
-              <i className="fa-solid fa-calendar-days accent"></i> {info.date}
+            <div className="icon-provider">
+              <CalendarDots size={20} weight="fill" /> {info.date}
             </div>
           </div>
           <div>
-            <div className="accent">
-              Read More <i className="fa-solid fa-book-open"></i>
+            <div className="accent icon-provider">
+              Read More <BookOpen size={20} weight="fill" />
             </div>
           </div>
         </div>

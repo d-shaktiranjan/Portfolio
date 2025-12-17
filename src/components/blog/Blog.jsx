@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 // utils & style imports
 import { getContentFromWeb } from "../../utils/blog";
 import "../../style/blog.css";
+import { CalendarDots, User } from "@phosphor-icons/react";
 
 // components imports
 import { NoMatch } from "../NoMatch";
@@ -86,11 +87,11 @@ export const Blog = () => {
           <>
             <h1 className="accent underline">{blogContent.title}</h1>
             <div className="blog-card-left flex accent">
-              <span>
-                <i className="fa-solid fa-user"></i> {blogContent.authorName}
+              <span className="icon-provider">
+                <User size={20} weight="fill" /> {blogContent.authorName}
               </span>
-              <span>
-                <i className="fa-solid fa-calendar-days"></i>{" "}
+              <span className="icon-provider">
+                <CalendarDots size={20} weight="fill" />{" "}
                 {blogContent.releaseData}
               </span>
             </div>
