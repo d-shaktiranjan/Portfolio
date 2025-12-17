@@ -16,7 +16,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-loading-skeleton": "^3.5.0",
-    "react-router-dom": "^7.10.1",
+    "react-router-dom": "^7.11.0",
     "react-syntax-highlighter": "^16.1.0"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "@vitejs/plugin-react-swc": "^4.2.2",
     "cspell": "^9.4.0",
     "prettier": "^3.7.4",
-    "vite": "^7.2.7"
+    "vite": "^7.3.0"
   },
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
