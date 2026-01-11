@@ -27,24 +27,25 @@ export const BlogHome = () => {
   }, []);
 
   return (
-    <div className="min-height blog-home">
-      {/* seo tags */}
+    <>
       <title>Blogs | Shakti Ranjan Debata</title>
       <meta
         name="description"
         content="Read my blog for insights on backend development, coding tutorials, and best practices in programming and system design."
       />
-
-      {isWaitOver && blogList.length === 0 ? (
-        <NoInternet />
-      ) : (
-        <div>
-          {blogList.map((item, index) => (
-            <BlogCard info={item} key={index} />
-          ))}
-        </div>
-      )}
-    </div>
+      <BlogBadge />
+      <div className="min-height blog-home">
+        {isWaitOver && blogList.length === 0 ? (
+          <NoInternet />
+        ) : (
+          <div style={{ maxWidth: "65rem", marginInline: "auto" }}>
+            {blogList.map((item, index) => (
+              <BlogCard info={item} key={index} />
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
@@ -90,6 +91,20 @@ const NoInternet = () => {
         <div>There's maybe some network issues on your side.</div>
         <div>Try changing your DNS settings or network.</div>
       </div>
+    </div>
+  );
+};
+
+export const BlogBadge = () => {
+  return (
+    <div className="blog-badge">
+      This blog section is no more maintained
+      <p>
+        Please visit{" "}
+        <a href="https://destructure.in/" className="underline" target="_blank">
+          destructure.in
+        </a>
+      </p>
     </div>
   );
 };
