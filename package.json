@@ -13,22 +13,22 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-loading-skeleton": "^3.5.0",
-    "react-router-dom": "^7.12.0",
-    "react-syntax-highlighter": "^16.1.0"
+    "react-router-dom": "^7.14.2",
+    "react-syntax-highlighter": "^16.1.1"
   },
   "devDependencies": {
-    "@swc/helpers": "^0.5.18",
-    "@types/react": "^19.2.8",
+    "@swc/helpers": "^0.5.21",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react-swc": "^4.2.2",
-    "cspell": "^9.4.0",
-    "prettier": "^3.7.4",
-    "vite": "^7.3.1"
+    "@vitejs/plugin-react-swc": "^4.3.0",
+    "cspell": "^10.0.0",
+    "prettier": "^3.8.3",
+    "vite": "^8.0.10"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.33.2",
   "pnpm": {
     "ignoredBuiltDependencies": [
       "@swc/core",
