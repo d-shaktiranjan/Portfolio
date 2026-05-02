@@ -1,5 +1,5 @@
 {
-  "Backend Technologies": ["Node JS", "Express JS", "Django", "DRF", "Flask"],
+  "Backend Technologies": ["Node.js", "Express.js", "Django", "DRF", "Flask"],
   "Databases": ["MySQL", "MongoDB", "MariaDB", "Redis"],
   "Languages": ["Java", "Python", "Javascript", "Typescript"],
   "DevOps & Tools": ["Linux", "Git", "Docker", "Nginx", "GitHub"],
