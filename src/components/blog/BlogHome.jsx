@@ -3,10 +3,18 @@ import { Link } from "react-router-dom";
 import { getContentFromWeb } from "../../utils/blog";
 import "../../style/blog.css";
 import { CalendarDots, User, BookOpen } from "@phosphor-icons/react";
+import { usePageMetadata } from "../../hooks/usePageMetadata";
+import { BlogBadge } from "./BlogBadge";
 
 export const BlogHome = () => {
   const [blogList, setBlogList] = useState([]);
   const [isWaitOver, setIsWaitOver] = useState(false);
+
+  usePageMetadata({
+    title: "Blogs | Shakti Ranjan Debata",
+    description:
+      "Read blog posts by Shakti Ranjan Debata on backend development, coding, and software engineering.",
+  });
 
   //  fetch blog list from web
   const updateBlogList = async () => {
@@ -28,19 +36,14 @@ export const BlogHome = () => {
 
   return (
     <>
-      <title>Blogs | Shakti Ranjan Debata</title>
-      <meta
-        name="description"
-        content="Read my blog for insights on backend development, coding tutorials, and best practices in programming and system design."
-      />
       <BlogBadge />
       <div className="min-height blog-home">
         {isWaitOver && blogList.length === 0 ? (
           <NoInternet />
         ) : (
           <div style={{ maxWidth: "65rem", marginInline: "auto" }}>
-            {blogList.map((item, index) => (
-              <BlogCard info={item} key={index} />
+            {blogList.map((item) => (
+              <BlogCard info={item} key={item.slug} />
             ))}
           </div>
         )}
@@ -91,20 +94,6 @@ const NoInternet = () => {
         <div>There's maybe some network issues on your side.</div>
         <div>Try changing your DNS settings or network.</div>
       </div>
-    </div>
-  );
-};
-
-export const BlogBadge = () => {
-  return (
-    <div className="blog-badge">
-      This blog section is no more maintained
-      <p>
-        Please visit{" "}
-        <a href="https://destructure.in/" className="underline" target="_blank">
-          destructure.in
-        </a>
-      </p>
     </div>
   );
 };

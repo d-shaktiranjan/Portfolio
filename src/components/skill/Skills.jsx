@@ -14,16 +14,10 @@ const Skill = (props) => {
 export const Skills = (props) => {
   return (
     <div className="skill-box">
-      {/* seo tag */}
-      <meta
-        name="description"
-        content="Explore the backend development skills of Shakti Ranjan Debata, including programming languages, database management, API design, and system architecture."
-      />
-
       <h1 className="underline accent">{props.heading}</h1>
       <div className="grid skills">
-        {props.list.map((item, index) => (
-          <Skill title={item} key={index} />
+        {props.list.map((item) => (
+          <Skill title={item} key={item} />
         ))}
       </div>
     </div>

@@ -1,36 +1,60 @@
-import React, { useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { getContentFromWeb } from "../../utils/blog";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { cb } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+const CodeHighlighter = lazy(() =>
+  import("./CodeHighlighter").then((module) => ({
+    default: module.CodeHighlighter,
+  })),
+);
+
+const CodeBlock = ({ path, language, isLocal, baseUrl, branch }) => {
+  const [code, setCode] = useState("");
+  const [isShowCheck, setIsShowCheck] = useState(false);
+
+  useEffect(() => {
+    const fetchCode = async () => {
+      const source = isLocal ? `${baseUrl}/${branch}/${path}` : path;
+      const nextCode = await getContentFromWeb(source, false);
+      setCode(nextCode);
+    };
+
+    fetchCode();
+  }, [baseUrl, branch, isLocal, path]);
+
+  const copyToClipboard = async () => {
+    if (!code) {
+      return;
+    }
+
+    await navigator.clipboard.writeText(code);
+    setIsShowCheck(true);
+    setTimeout(() => setIsShowCheck(false), 4000);
+  };
+
+  return (
+    <div className="code-in-side">
+      <button
+        type="button"
+        className="copy-to-clipboard"
+        onClick={copyToClipboard}
+      >
+        {isShowCheck ? (
+          <i className="fa-solid fa-check accent"></i>
+        ) : (
+          <i className="fa-regular fa-clipboard"></i>
+        )}
+      </button>
+      <Suspense fallback={<pre id="rawCode">{code}</pre>}>
+        <CodeHighlighter code={code} language={language} />
+      </Suspense>
+    </div>
+  );
+};
 
 export const BlogPart = (props) => {
   // env variables
   const branch = import.meta.env.VITE_BLOG_BRANCH;
   const baseUrl = import.meta.env.VITE_BLOG_BASE_URL;
-
-  // state variables
-  const [code, setCode] = useState();
-  const [isShowCheck, setIsShowCheck] = useState(false);
-
-  // fetch code from BlogData repo
-  const fetchCode = async (path, isLocal) => {
-    if (!isLocal) {
-      const code = await getContentFromWeb(path, false);
-      setCode(code);
-    } else {
-      const code = await getContentFromWeb(
-        `${baseUrl}/${branch}/${path}`,
-        false,
-      );
-      setCode(code);
-    }
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(code);
-    setIsShowCheck(true);
-    setTimeout(() => setIsShowCheck(false), 4000);
-  };
 
   // checking item type & render components accordingly
   const type = props.itemName.split("-")[0];
@@ -62,25 +86,14 @@ export const BlogPart = (props) => {
 
   // if type is code, then fetch code & place inside SyntaxHighlighter tag
   if (type === "code") {
-    fetchCode(props.value[0], props.value[2]);
     return (
-      <div className="code-in-side">
-        <div className="copy-to-clipboard" onClick={copyToClipboard}>
-          {isShowCheck ? (
-            <i className="fa-solid fa-check accent"></i>
-          ) : (
-            <i className="fa-regular fa-clipboard"></i>
-          )}
-        </div>
-        <SyntaxHighlighter
-          id="rawCode"
-          language={props.value[1]}
-          style={cb}
-          wrapLines={true}
-        >
-          {code}
-        </SyntaxHighlighter>
-      </div>
+      <CodeBlock
+        path={props.value[0]}
+        language={props.value[1]}
+        isLocal={props.value[2]}
+        baseUrl={baseUrl}
+        branch={branch}
+      />
     );
   }
 
@@ -112,7 +125,12 @@ export const BlogPart = (props) => {
 
   if (type === "link") {
     return (
-      <a href={props.value[1]} target="_blank" className="accent">
+      <a
+        href={props.value[1]}
+        target="_blank"
+        rel="noreferrer"
+        className="accent"
+      >
         {props.value[0]}
       </a>
     );

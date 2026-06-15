@@ -11,16 +11,18 @@ import { CalendarDots, User } from "@phosphor-icons/react";
 import { NoMatch } from "../NoMatch";
 import { BlogPart } from "./BlogPart";
 import { BlogLoading } from "./BlogLoading";
-import { BlogBadge } from "./BlogHome";
+import { BlogBadge } from "./BlogBadge";
+import { usePageMetadata } from "../../hooks/usePageMetadata";
 
 export const Blog = () => {
   const params = useParams();
 
   // state variables
-  const [blogContent, setBlogContent] = useState({ order: [] });
-  const [blogData, setBlogData] = useState({});
+  const [blogContent, setBlogContent] = useState(null);
+  const [blogData, setBlogData] = useState(null);
   const [waitComplete, setWaitComplete] = useState(false);
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
+  const [hasLoadError, setHasLoadError] = useState(false);
 
   // env variables
   const branch = import.meta.env.VITE_BLOG_BRANCH;
@@ -28,61 +30,81 @@ export const Blog = () => {
 
   //  fetch blog list from web
   const updateBlogList = async () => {
-    const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
-    list.map((item) => {
-      if (item.slug === params.slug) {
-        setBlogData(item);
-      }
-    });
-    setWaitComplete(true);
+    try {
+      setWaitComplete(false);
+      setHasLoadError(false);
+      setBlogData(null);
+      setBlogContent(null);
+      setIsLoadingComplete(false);
+      const list = await getContentFromWeb(`${baseUrl}/${branch}/about.json`);
+      const matchedBlog =
+        list.find((item) => item.slug === params.slug) ?? null;
+      setBlogData(matchedBlog);
+    } finally {
+      setWaitComplete(true);
+    }
   };
 
   // get blog content from gist link
   const getBlog = async () => {
-    const fileLink = `${baseUrl}/${branch}/${blogData.filePath}/blog.json`;
-    const data = await getContentFromWeb(fileLink);
+    if (!blogData?.filePath) {
+      return;
+    }
 
-    // set 250ms delay to show react-skeleton-loading
-    setTimeout(() => {
-      setBlogContent(data);
-      setIsLoadingComplete(true);
-    }, 250);
+    try {
+      const fileLink = `${baseUrl}/${branch}/${blogData.filePath}/blog.json`;
+      const data = await getContentFromWeb(fileLink);
+
+      // set 250ms delay to show react-skeleton-loading
+      setTimeout(() => {
+        setBlogContent(data);
+        setIsLoadingComplete(true);
+      }, 250);
+    } catch (error) {
+      setHasLoadError(true);
+    }
   };
 
   // update blog list before load the page
   useEffect(() => {
     updateBlogList();
-  }, []);
+  }, [baseUrl, branch, params.slug]);
 
   // update blogContent after blogData fetched
   useEffect(() => {
+    if (!blogData?.filePath) {
+      return;
+    }
+
     getBlog();
-  }, [blogData]);
+  }, [blogData, baseUrl, branch]);
 
   // if slug is invalid show NoMatch component
-  if (!blogData && waitComplete) {
+  if (blogData === null && waitComplete) {
     return <NoMatch />;
   }
 
-  const description = blogContent.title + "-" + blogContent.description;
+  if (hasLoadError) {
+    return <NoMatch />;
+  }
+
+  const description = blogContent
+    ? `${blogContent.title} - ${blogContent.description}`
+    : "Read blog posts by Shakti Ranjan Debata on backend development and software engineering.";
+
+  usePageMetadata({
+    title: isLoadingComplete
+      ? `${blogContent.title} | Shakti Ranjan Debata`
+      : "Blog | Shakti Ranjan Debata",
+    description,
+    ogTitle: blogContent?.title,
+    ogDescription: description,
+  });
 
   return (
     <>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={blogContent.title} />
-      <meta property="og:description" content={description} />
-      <title>
-        {isLoadingComplete
-          ? `${blogContent.title} | Shakti Ranjan Debata`
-          : `Blog | Shakti Ranjan Debata`}
-      </title>
       <BlogBadge />
       <div className="container min-height blog-content">
-        <title>
-          {isLoadingComplete
-            ? `${blogContent.title} | Shakti Ranjan Debata`
-            : `Blog | Shakti Ranjan Debata`}
-        </title>
         {isLoadingComplete ? (
           <>
             <h1 className="accent underline">{blogContent.title}</h1>
@@ -96,7 +118,11 @@ export const Blog = () => {
               </span>
             </div>
             {Object.keys(blogContent.blogContent).map((item) => (
-              <BlogPart itemName={item} value={blogContent.blogContent[item]} />
+              <BlogPart
+                key={item}
+                itemName={item}
+                value={blogContent.blogContent[item]}
+              />
             ))}
           </>
         ) : (
